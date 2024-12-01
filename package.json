@@ -2,7 +2,7 @@
   "name": "awesome-list-explorer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yourusername.github.io/awesome-list-explorer",
+  "homepage": "https://BytexGrid.github.io/awesome-list-explorer",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@testing-library/jest-dom": "^5.16.5",
@@ -21,12 +21,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
