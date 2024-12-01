@@ -13,9 +13,14 @@ export interface AwesomeList {
   repository_url: string;
 }
 
-export const fetchAwesomeLists = async (): Promise<AwesomeList[]> => {
+export const fetchAwesomeLists = async (page = 1, perPage = 50): Promise<AwesomeList[]> => {
   try {
-    const response = await axios.get(`${BASE_URL}/lists`);
+    const response = await axios.get(`${BASE_URL}/lists`, {
+      params: { 
+        page, 
+        per_page: perPage 
+      }
+    });
     return response.data;
   } catch (error) {
     console.error('Error fetching awesome lists:', error);
@@ -23,14 +28,28 @@ export const fetchAwesomeLists = async (): Promise<AwesomeList[]> => {
   }
 };
 
-export const searchAwesomeLists = async (query: string): Promise<AwesomeList[]> => {
+export const searchAwesomeLists = async (query: string, page = 1, perPage = 50): Promise<AwesomeList[]> => {
   try {
     const response = await axios.get(`${BASE_URL}/lists/search`, {
-      params: { q: query }
+      params: { 
+        q: query,
+        page,
+        per_page: perPage
+      }
     });
     return response.data;
   } catch (error) {
     console.error('Error searching awesome lists:', error);
     return [];
+  }
+};
+
+export const getListDetails = async (fullName: string): Promise<AwesomeList | null> => {
+  try {
+    const response = await axios.get(`${BASE_URL}/lists/${fullName}`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching details for list ${fullName}:`, error);
+    return null;
   }
 };
