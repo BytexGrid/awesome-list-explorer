@@ -1,0 +1,248 @@
+/* Base Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Theme (Default) */
+body.light-theme {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+body.light-theme main {
+    background-color: #ffffff;
+}
+
+body.light-theme a {
+    color: #007acc;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme main {
+    background-color: #1e1e1e;
+}
+
+body.dark-theme a {
+    color: #4db8ff;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007acc;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Theme Switch Styles */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+
+.sun-emoji, .moon-emoji {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    
+    /* Prevent text selection */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+    /* Prevent cursor from indicating text selection */
+    cursor: pointer;
+}
+
+.sun-emoji {
+    left: 0;
+    justify-content: flex-start;
+    padding-left: 5px;
+}
+
+.moon-emoji {
+    right: 0;
+    justify-content: flex-end;
+    padding-right: 5px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Card Styles */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.card a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin-bottom: 5px;
+}
+
+/* Sub-item Styles */
+.sub-item {
+    margin-left: 20px;
+}
+
+/* Heading Styles */
+.heading {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Markdown Content Styles */
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .theme-toggle {
+        margin-top: 10px;
+    }
+}

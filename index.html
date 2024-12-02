@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Lists Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --bg-primary-light: #f4f6f9;
+            --bg-secondary-light: #ffffff;
+            --text-primary-light: #2c3e50;
+            --text-secondary-light: #34495e;
+            --accent-color-light: #007acc;
+
+            --bg-primary-dark: #121212;
+            --bg-secondary-dark: #1e1e1e;
+            --text-primary-dark: #e0e0e0;
+            --text-secondary-dark: #b0b0b0;
+            --accent-color-dark: #4db8ff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light-theme {
+            background-color: var(--bg-primary-light);
+            color: var(--text-primary-light);
+        }
+
+        body.dark-theme {
+            background-color: var(--bg-primary-dark);
+            color: var(--text-primary-dark);
+        }
+
+        #content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .heading {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .light-theme .heading {
+            color: var(--accent-color-light);
+        }
+
+        .dark-theme .heading {
+            color: var(--accent-color-dark);
+        }
+
+        .heading::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+        }
+
+        .light-theme .heading::after {
+            background-color: var(--accent-color-light);
+        }
+
+        .dark-theme .heading::after {
+            background-color: var(--accent-color-dark);
+        }
+
+        .card {
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+            border-left: 5px solid;
+        }
+
+        .light-theme .card {
+            background-color: var(--bg-secondary-light);
+            border-left-color: var(--accent-color-light);
+        }
+
+        .dark-theme .card {
+            background-color: var(--bg-secondary-dark);
+            border-left-color: var(--accent-color-dark);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .light-theme .card a {
+            color: var(--accent-color-light);
+        }
+
+        .dark-theme .card a {
+            color: var(--accent-color-dark);
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        .light-theme .card p {
+            color: var(--text-secondary-light);
+        }
+
+        .dark-theme .card p {
+            color: var(--text-secondary-dark);
+        }
+
+        .sub-item {
+            margin-top: 1rem;
+            padding-left: 1rem;
+            border-left: 3px solid #e0e0e0;
+        }
+
+        .sub-item a {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .sub-item p {
+            font-size: 0.9rem;
+        }
+
+        .light-theme .sub-item p {
+            color: #7f8c8d;
+        }
+
+        .dark-theme .sub-item p {
+            color: #a0a0a0;
+        }
+
+        /* Grid Layout for Platforms */
+        .platforms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .platforms-grid .card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .platforms-grid .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .platforms-grid .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .platforms-grid .card a {
+            margin-bottom: 0.5rem;
+        }
+
+        .platforms-grid .card p {
+            flex-grow: 1;
+        }
+
+        /* Grid Layout for Categories */
+        .categories-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .category-card {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .light-theme .category-card {
+            border-color: rgba(0, 122, 204, 0.2);
+            background: linear-gradient(145deg, 
+                rgba(255, 255, 255, 0.9) 0%, 
+                rgba(240, 240, 240, 0.7) 100%);
+        }
+
+        .dark-theme .category-card {
+            border-color: rgba(77, 184, 255, 0.2);
+            background: linear-gradient(145deg, 
+                rgba(30, 30, 30, 0.9) 0%, 
+                rgba(40, 40, 40, 0.7) 100%);
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle at center, 
+                rgba(0, 122, 204, 0.1), 
+                transparent 70%
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-card:hover::before {
+            opacity: 1;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--accent-color);
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            opacity: 0.7;
+        }
+
+        .category-card .item-count {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .category-card .icon {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 5rem;
+            opacity: 0.1;
+            color: var(--accent-color);
+            z-index: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover .icon {
+            transform: rotate(15deg) scale(1.2);
+        }
+
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 3px 8px;
+            border-radius: 16px;
+            margin-left: 8px;
+            vertical-align: middle;
+            background: linear-gradient(
+                135deg, 
+                rgba(var(--accent-color-rgb), 0.8) 0%, 
+                rgba(var(--accent-color-rgb), 0.6) 100%
+            );
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .category-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(
+                135deg, 
+                rgba(var(--accent-color-rgb), 0.9) 0%, 
+                rgba(var(--accent-color-rgb), 0.7) 100%
+            );
+        }
+
+        .category-badge .item-count {
+            margin-left: 6px;
+            opacity: 0.8;
+            font-size: 0.6rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1px 5px;
+            border-radius: 10px;
+        }
+
+        .search-result-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .search-result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .search-result-title {
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .search-result-description {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .search-result-category {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            text-align: right;
+        }
+
+        .search-result-card.category-result {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(
+                145deg, 
+                rgba(var(--accent-color-rgb), 0.05) 0%, 
+                rgba(var(--accent-color-rgb), 0.02) 100%
+            );
+            border: 1px solid rgba(var(--accent-color-rgb), 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .search-result-card.category-result::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(
+                to bottom, 
+                rgba(var(--accent-color-rgb), 0.7) 0%, 
+                rgba(var(--accent-color-rgb), 0.4) 100%
+            );
+        }
+
+        .search-result-card.category-result:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: rgba(var(--accent-color-rgb), 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .category-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            #content {
+                padding: 1rem;
+            }
+
+            .card {
+                padding: 1rem;
+            }
+
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Search bar styling and container for search results */
+        .search-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 50px;
+            font-size: 1rem;
+            background-color: var(--bg-secondary);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .search-clear-btn {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .search-clear-btn.visible {
+            opacity: 1;
+        }
+
+        .search-results-container {
+            display: none;
+        }
+
+        .search-results-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Awesome Lists Explorer</h1>
+        <label class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider">
+                <span class="sun-emoji">☀️</span>
+                <span class="moon-emoji">🌙</span>
+            </span>
+        </label>
+    </header>
+
+    <div id="content" class="categories-container">
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="global-search" 
+                class="search-input" 
+                placeholder="Search Awesome Lists..."
+            >
+            <button id="clear-search" class="search-clear-btn">✕</button>
+        </div>
+
+        <div id="search-results" class="search-results-container"></div>
+
+        <h1 class="heading">Awesome Lists Categories</h1>
+        <div id="categories-grid" class="categories-grid">
+            <!-- Categories will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference or default to light theme
+        const savedTheme = localStorage.getItem('theme') || 'light-theme';
+        body.classList.add(savedTheme);
+        themeToggle.checked = savedTheme === 'dark-theme';
+
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                body.classList.replace('light-theme', 'dark-theme');
+                localStorage.setItem('theme', 'dark-theme');
+            } else {
+                body.classList.replace('dark-theme', 'light-theme');
+                localStorage.setItem('theme', 'light-theme');
+            }
+        });
+
+        let allData = null;
+
+        function highlightText(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<mark>$1</mark>');
+        }
+
+        function performSearch(query) {
+            if (!allData) return [];
+
+            query = query.toLowerCase().trim();
+            const searchResults = [];
+
+            // Priority 1: Category Name Matches
+            allData.Contents.forEach(category => {
+                if (category.name.toLowerCase().includes(query)) {
+                    searchResults.push({
+                        name: category.name,
+                        description: `Category with ${allData[category.name].length} items`,
+                        link: `category.html?name=${encodeURIComponent(category.name)}`,
+                        score: 4,
+                        matchType: 'Category Name Match',
+                        isCategory: true
+                    });
+                }
+            });
+
+            // Priority 2: Category-level Item Name Matches
+            allData.Contents.forEach(category => {
+                const categoryItems = allData[category.name];
+
+                categoryItems.forEach(item => {
+                    let score = 0;
+                    let matchType = '';
+
+                    // Name match (high priority)
+                    if (item.name.toLowerCase().includes(query)) {
+                        score = 3;
+                        matchType = 'Item Name Match';
+                    }
+                    // Sub-items match (medium priority)
+                    else if (item.sub_items && item.sub_items.some(subItem => 
+                        subItem.name.toLowerCase().includes(query)
+                    )) {
+                        score = 2;
+                        matchType = 'Sub-Item Match';
+                    }
+                    // Description match (lowest priority)
+                    else if (item.description && item.description.toLowerCase().includes(query)) {
+                        score = 1;
+                        matchType = 'Description Match';
+                    }
+
+                    if (score > 0) {
+                        searchResults.push({
+                            ...item,
+                            category: category.name,
+                            score,
+                            matchType,
+                            link: `category.html?name=${encodeURIComponent(category.name)}`,
+                            isCategory: false
+                        });
+                    }
+                });
+            });
+
+            // Sort results by score (descending)
+            return searchResults.sort((a, b) => {
+                // First, sort by score
+                if (b.score !== a.score) {
+                    return b.score - a.score;
+                }
+                
+                // If scores are equal, prioritize categories
+                return (b.isCategory ? 1 : 0) - (a.isCategory ? 1 : 0);
+            });
+        }
+
+        function displaySearchResults(results, query) {
+            const searchResultsContainer = document.getElementById('search-results');
+            const categoriesGrid = document.getElementById('categories-grid');
+            const searchClearBtn = document.getElementById('clear-search');
+
+            if (results.length === 0) {
+                searchResultsContainer.innerHTML = '<p>No results found</p>';
+                searchResultsContainer.classList.add('active');
+                categoriesGrid.style.display = 'none';
+                return;
+            }
+
+            searchResultsContainer.innerHTML = results.map(result => `
+                <div class="search-result-card ${result.isCategory ? 'category-result' : ''} ${result.category ? `category-${result.category.toLowerCase().replace(' ', '-')}` : ''}">
+                    <a href="${result.link}" target="_blank" class="search-result-title">
+                        ${highlightText(result.name, query)}
+                        ${result.isCategory ? `
+                            <span class="category-badge">
+                                🗂️ Category
+                                <span class="item-count">${result.description}</span>
+                            </span>
+                        ` : ''}
+                    </a>
+                    <p class="search-result-description">
+                        ${highlightText(result.description || 'No description', query)}
+                    </p>
+                    ${!result.isCategory ? `
+                        <div class="search-result-category">
+                            Category: ${result.category} (${result.matchType})
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+
+            searchResultsContainer.classList.add('active');
+            categoriesGrid.style.display = 'none';
+            searchClearBtn.classList.add('visible');
+        }
+
+        function clearSearch() {
+            const searchInput = document.getElementById('global-search');
+            const searchResultsContainer = document.getElementById('search-results');
+            const categoriesGrid = document.getElementById('categories-grid');
+            const searchClearBtn = document.getElementById('clear-search');
+
+            searchInput.value = '';
+            searchResultsContainer.innerHTML = '';
+            searchResultsContainer.classList.remove('active');
+            categoriesGrid.style.display = 'grid';
+            searchClearBtn.classList.remove('visible');
+        }
+
+        document.getElementById('global-search').addEventListener('input', function() {
+            const query = this.value;
+            const results = performSearch(query);
+            displaySearchResults(results, query);
+        });
+
+        document.getElementById('clear-search').addEventListener('click', clearSearch);
+
+        // Icons for different categories
+        const categoryIcons = {
+            'Platforms': '💻',
+            'Programming Languages': '🖥️',
+            'Web Development': '🌐',
+            'Mobile Development': '📱',
+            'Machine Learning': '🤖',
+            'Data Science': '📊',
+            'DevOps': '🚀',
+            'Security': '🔒',
+            'Blockchain': '⛓️',
+            'Gaming': '🎮'
+        };
+
+        // Fetch the JSON data and dynamically create category cards
+        fetch('parsed_content.json')
+            .then(response => response.json())
+            .then(data => {
+                allData = data;
+                const categoriesGrid = document.getElementById('categories-grid');
+
+                data.Contents.forEach(category => {
+                    const categoryCard = document.createElement('a');
+                    categoryCard.href = `category.html?name=${encodeURIComponent(category.name)}`;
+                    categoryCard.className = 'category-card';
+
+                    const categoryName = document.createElement('h3');
+                    categoryName.textContent = category.name;
+                    categoryCard.appendChild(categoryName);
+
+                    const itemCount = document.createElement('div');
+                    itemCount.className = 'item-count';
+                    const categoryItems = data[category.name];
+                    itemCount.textContent = `${categoryItems.length} Items`;
+                    categoryCard.appendChild(itemCount);
+
+                    const iconSpan = document.createElement('span');
+                    iconSpan.className = 'icon';
+                    iconSpan.textContent = categoryIcons[category.name] || '📁';
+                    categoryCard.appendChild(iconSpan);
+
+                    categoriesGrid.appendChild(categoryCard);
+                });
+            })
+            .catch(error => console.error('Error loading JSON:', error));
+    </script>
+</body>
+</html>
