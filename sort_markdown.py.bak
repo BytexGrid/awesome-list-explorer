@@ -1,0 +1,82 @@
+import re
+import json
+
+def parse_markdown(content):
+    lines = content.split('\n')
+    data = []
+    current_category = None
+    current_item = None
+
+    for line in lines:
+        # Category detection
+        if line.startswith('## '):
+            current_category = {
+                'name': line.replace('## ', '').strip(),
+                'items': []
+            }
+            data.append(current_category)
+            current_item = None  # Reset current item for new category
+
+        # Item detection
+        elif line.startswith('- ') and not re.match(r'^\s+- ', line):
+            # Extract name, link, and description
+            name_part = line[2:].strip()
+            link_match = re.match(r'\[(.*?)\]\((.*?)\)', name_part)
+            
+            if link_match:
+                name = link_match.group(1)
+                link = link_match.group(2)
+                description_parts = name_part[link_match.end():].split(' - ', 1)
+                description = description_parts[1].strip() if len(description_parts) > 1 else ''
+            else:
+                name = name_part
+                link = ''
+                description_parts = name_part.split(' - ', 1)
+                description = description_parts[1].strip() if len(description_parts) > 1 else ''
+
+            current_item = {
+                'name': name,
+                'link': link,
+                'description': description,
+                'sub_items': []
+            }
+            
+            if current_category:
+                current_category['items'].append(current_item)
+
+        # Sub-item detection
+        elif re.match(r'^\s+- ', line):
+            # Extract sub-item name, link, and description
+            sub_item_part = line.strip()[2:]
+            link_match = re.match(r'\[(.*?)\]\((.*?)\)', sub_item_part)
+            
+            if link_match:
+                name = link_match.group(1)
+                link = link_match.group(2)
+                description_parts = sub_item_part[link_match.end():].split(' - ', 1)
+                description = description_parts[1].strip() if len(description_parts) > 1 else ''
+            else:
+                name = sub_item_part
+                link = ''
+                description_parts = sub_item_part.split(' - ', 1)
+                description = description_parts[1].strip() if len(description_parts) > 1 else ''
+
+            if current_item:
+                current_item['sub_items'].append({
+                    'name': name,
+                    'link': link,
+                    'description': description
+                })
+
+    return data
+
+# Read the README.md file
+with open('readme.md', 'r', encoding='utf-8') as file:
+    markdown_content = file.read()
+
+# Parse the markdown content
+parsed_content = parse_markdown(markdown_content)
+
+# Write the parsed content to a JSON file
+with open('parsed_content.json', 'w', encoding='utf-8') as json_file:
+    json.dump(parsed_content, json_file, ensure_ascii=False, indent=4)

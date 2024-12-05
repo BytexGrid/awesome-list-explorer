@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Awesome Lists Explorer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -493,14 +494,14 @@
         }
     </style>
 </head>
-<body class="light-theme">
+<body>
     <header>
         <h1>Awesome Lists Explorer</h1>
         <label class="theme-switch">
             <input type="checkbox" id="themeToggle">
             <span class="slider">
-                <span class="sun-emoji">☀️</span>
                 <span class="moon-emoji">🌙</span>
+                <span class="sun-emoji">☀️</span>
             </span>
         </label>
     </header>
@@ -604,7 +605,7 @@
                             category: category.name,
                             score,
                             matchType,
-                            link: `category.html?name=${encodeURIComponent(category.name)}`,
+                            link: `category.html?name=${encodeURIComponent(category.name)}#item-${encodeURIComponent(item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`,
                             isCategory: false
                         });
                     }
@@ -637,7 +638,7 @@
 
             searchResultsContainer.innerHTML = results.map(result => `
                 <div class="search-result-card ${result.isCategory ? 'category-result' : ''} ${result.category ? `category-${result.category.toLowerCase().replace(' ', '-')}` : ''}">
-                    <a href="${result.link}" target="_blank" class="search-result-title">
+                    <a href="${result.link}" class="search-result-title">
                         ${highlightText(result.name, query)}
                         ${result.isCategory ? `
                             <span class="category-badge">

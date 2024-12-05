@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>Category - Awesome Lists Explorer</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+<script src="category.js" defer></script>
     <style>
+        @keyframes highlightFade {
+            0% {
+                background: var(--accent-color-light) !important;
+                transform: scale(1.02);
+                border-color: var(--accent-color-light) !important;
+            }
+            100% {
+                background: var(--bg-secondary) !important;
+                transform: scale(1);
+                border-color: transparent !important;
+            }
+        }
+        
+        .category-item-card.highlight-item {
+            animation: highlightFade 2s ease-out forwards;
+        }
         .category-items-container {
             display: flex;
             flex-direction: column;
@@ -226,14 +245,14 @@
         }
     </style>
 </head>
-<body class="light-theme">
+<body>
     <header>
         <h1>Awesome Lists Explorer</h1>
         <label class="theme-switch">
             <input type="checkbox" id="themeToggle">
             <span class="slider">
-                <span class="sun-emoji">☀️</span>
                 <span class="moon-emoji">🌙</span>
+                <span class="sun-emoji">☀️</span>
             </span>
         </label>
     </header>
