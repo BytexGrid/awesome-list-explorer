@@ -73,41 +73,32 @@ function performSearch(query) {
 }
 
 function displaySearchResults(results, query) {
-    const searchResultsContainer = document.getElementById('search-results');
-    const categoriesGrid = document.getElementById('categories-grid');
-    const searchClearBtn = document.getElementById('clear-search');
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Clear previous results
 
     if (results.length === 0) {
-        searchResultsContainer.innerHTML = '<p>No results found</p>';
-        searchResultsContainer.classList.add('active');
-        categoriesGrid.style.display = 'none';
+        resultsContainer.innerHTML = '<p>No results found</p>';
         return;
     }
 
-    searchResultsContainer.innerHTML = results.map(result => `
-        <div class="search-result-card ${result.type === 'category' ? 'category-result' : ''}">
+    results.forEach(result => {
+        const resultItem = document.createElement('div');
+        resultItem.className = 'search-result-card'; // Use the same class as category cards
+        resultItem.innerHTML = `
             <a href="${result.link || `category.html?name=${encodeURIComponent(result.name)}`}" target="_blank" class="search-result-title">
                 ${highlightText(result.name, query)}
-                ${result.type === 'category' ? `
-                    <span class="category-badge">
-                        🗂️ Category
-                    </span>
-                ` : ''}
             </a>
-            ${result.type !== 'category' ? `
-                <p class="search-result-description">
-                    ${highlightText(result.description, query)}
-                </p>
-                <div class="search-result-category">
-                    Category: ${result.category}
-                </div>
-            ` : ''}
-        </div>
-    `).join('');
+            <p class="search-result-description">
+                ${highlightText(result.description, query)}
+            </p>
+            <div class="search-result-category">
+                Category: ${result.category}
+            </div>
+        `;
+        resultsContainer.appendChild(resultItem);
+    });
 
-    searchResultsContainer.classList.add('active');
-    categoriesGrid.style.display = 'none';
-    searchClearBtn.classList.add('visible');
+    resultsContainer.classList.add('active'); // Show the results container
 }
 
 function clearSearch() {
@@ -126,18 +117,23 @@ function clearSearch() {
 // Initialize event listeners
 function initializeEventListeners() {
     const searchInput = document.getElementById('global-search');
-    searchInput.addEventListener('input', function() {
-        const query = this.value;
-        const results = performSearch(query);
-        displaySearchResults(results, query);
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value;
+            const results = performSearch(query);
+            displaySearchResults(results, query);
 
-        // Check if the input is empty
-        if (query === '') {
-            clearSearch(); // Trigger cancel search
-        }
-    });
+            // Check if the input is empty
+            if (query === '') {
+                clearSearch(); // Trigger cancel search
+            }
+        });
+    }
 
-    document.getElementById('clear-search').addEventListener('click', clearSearch);
+    const clearSearchButton = document.getElementById('clear-search');
+    if (clearSearchButton) {
+        clearSearchButton.addEventListener('click', clearSearch);
+    }
 }
 
 import { followManager } from './js/follow-manager.js';

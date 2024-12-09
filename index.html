@@ -517,17 +517,18 @@
 <body>
     <header>
         <h1>Awesome Lists Explorer</h1>
-        <div class="header-right">
-            <input type="text" id="global-search" placeholder="Search awesome lists..." />
-            <label class="theme-switch">
-                <input type="checkbox" id="theme-toggle">
-                <span class="slider round"></span>
-            </label>
-        </div>
+        <label class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider">
+                <span class="moon-emoji">🌙</span>
+                <span class="sun-emoji">☀️</span>
+            </span>
+        </label>
     </header>
 
     <div id="content" class="categories-container">
         <div class="search-container">
+            <input type="text" id="global-search" class="search-input" placeholder="Search awesome lists...">
             <button id="clear-search" class="search-clear-btn">✕</button>
         </div>
 
@@ -541,7 +542,7 @@
 
     <script>
         // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
         // Check for saved theme preference or default to light theme
