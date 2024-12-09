@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <title>Awesome Lists Explorer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
         :root {
-            --bg-primary-light: #f4f6f9;
-            --bg-secondary-light: #ffffff;
+            --bg-primary-light: #b76d6d;
+            --bg-secondary-light: #6f0202;
             --text-primary-light: #2c3e50;
             --text-secondary-light: #34495e;
             --accent-color-light: #007acc;
-
             --bg-primary-dark: #121212;
             --bg-secondary-dark: #1e1e1e;
             --text-primary-dark: #e0e0e0;
@@ -23,9 +24,10 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
+            background-color: var(--bg-primary-light);
         }
 
         body.light-theme {
@@ -193,15 +195,35 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem;
+            padding: 1rem;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .categories-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
             width: 100%;
-            max-width: 1400px;
+        }
+
+        @media (max-width: 1200px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .category-card {
@@ -218,6 +240,50 @@
             position: relative;
             overflow: hidden;
             border: 2px solid transparent;
+            min-height: 220px;
+        }
+
+        .category-card .description {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 0.5rem;
+        }
+
+        .category-card .resource-count {
+            text-align: right;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            display: inline-block;
+            margin-left: auto;
+        }
+
+        .category-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: left;
+            color: var(--accent-color);
+            position: relative;
+            z-index: 1;
+            padding: 0 0.5rem;
         }
 
         .light-theme .category-card {
@@ -257,52 +323,6 @@
         .category-card:hover {
             transform: translateY(-10px) scale(1.03);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        .category-card h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: center;
-            color: var(--accent-color);
-            position: relative;
-            z-index: 1;
-        }
-
-        .category-card h3::after {
-            content: '';
-            position: absolute;
-            bottom: -0.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent-color);
-            opacity: 0.7;
-        }
-
-        .category-card .item-count {
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-top: 0.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .category-card .icon {
-            position: absolute;
-            top: -20px;
-            right: -20px;
-            font-size: 5rem;
-            opacity: 0.1;
-            color: var(--accent-color);
-            z-index: 0;
-            transition: transform 0.3s ease;
-        }
-
-        .category-card:hover .icon {
-            transform: rotate(15deg) scale(1.2);
         }
 
         .category-badge {
@@ -362,7 +382,7 @@
 
         .search-result-title {
             font-weight: 600;
-            color: var(--accent-color);
+            color: #000000;
             margin-bottom: 0.5rem;
         }
 
@@ -497,23 +517,17 @@
 <body>
     <header>
         <h1>Awesome Lists Explorer</h1>
-        <label class="theme-switch">
-            <input type="checkbox" id="themeToggle">
-            <span class="slider">
-                <span class="moon-emoji">🌙</span>
-                <span class="sun-emoji">☀️</span>
-            </span>
-        </label>
+        <div class="header-right">
+            <input type="text" id="global-search" placeholder="Search awesome lists..." />
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
     </header>
 
     <div id="content" class="categories-container">
         <div class="search-container">
-            <input 
-                type="text" 
-                id="global-search" 
-                class="search-input" 
-                placeholder="Search Awesome Lists..."
-            >
             <button id="clear-search" class="search-clear-btn">✕</button>
         </div>
 
@@ -527,7 +541,7 @@
 
     <script>
         // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
+        const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
 
         // Check for saved theme preference or default to light theme
@@ -714,10 +728,15 @@
                     categoryName.textContent = category.name;
                     categoryCard.appendChild(categoryName);
 
+                    const categoryDescription = document.createElement('p');
+                    categoryDescription.className = 'description';
+                    categoryDescription.textContent = 'A curated collection of awesome ' + category.name.toLowerCase() + ' resources.';
+                    categoryCard.appendChild(categoryDescription);
+
                     const itemCount = document.createElement('div');
-                    itemCount.className = 'item-count';
+                    itemCount.className = 'resource-count';
                     const categoryItems = data[category.name];
-                    itemCount.textContent = `${categoryItems.length} Items`;
+                    itemCount.textContent = `${categoryItems.length} Resources`;
                     categoryCard.appendChild(itemCount);
 
                     const iconSpan = document.createElement('span');
@@ -730,5 +749,13 @@
             })
             .catch(error => console.error('Error loading JSON:', error));
     </script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getDatabase } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+        import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+    </script>
+    <script src="firebase-config.js" type="module"></script>
+    <script src="js/follow-manager.js" type="module"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

@@ -1,0 +1,2374 @@
+{
+  "Node.js": {
+    "link": "https://github.com/sindresorhus/awesome-nodejs#readme",
+    "stars": 58818
+  },
+  "Frontend Development": {
+    "link": "https://github.com/dypsilon/frontend-dev-bookmarks#readme",
+    "stars": 42715
+  },
+  "iOS": {
+    "link": "https://github.com/vsouza/awesome-ios#readme",
+    "stars": 47563
+  },
+  "Android": {
+    "link": "https://github.com/JStumpp/awesome-android#readme",
+    "stars": 11037
+  },
+  "IoT & Hybrid Apps": {
+    "link": "https://github.com/weblancaster/awesome-IoT-hybrid#readme",
+    "stars": 562
+  },
+  "Electron": {
+    "link": "https://github.com/sindresorhus/awesome-electron#readme",
+    "stars": 25936
+  },
+  "Cordova": {
+    "link": "https://github.com/busterc/awesome-cordova#readme",
+    "stars": 296
+  },
+  "React Native": {
+    "link": "https://github.com/jondot/awesome-react-native#readme",
+    "stars": 34735
+  },
+  "Xamarin": {
+    "link": "https://github.com/XamSome/awesome-xamarin#readme",
+    "stars": 1863
+  },
+  "Linux": {
+    "link": "https://github.com/inputsh/awesome-linux#readme",
+    "stars": 4357
+  },
+  "watchOS": {
+    "link": "https://github.com/yenchenlin/awesome-watchos#readme",
+    "stars": 468
+  },
+  "JVM": {
+    "link": "https://github.com/deephacks/awesome-jvm#readme",
+    "stars": 2086
+  },
+  "Salesforce": {
+    "link": "https://github.com/mailtoharshit/awesome-salesforce#readme",
+    "stars": 733
+  },
+  "Amazon Web Services": {
+    "link": "https://github.com/donnemartin/awesome-aws#readme",
+    "stars": 12532
+  },
+  "Windows": {
+    "link": "https://github.com/0pandadev/awesome-windows#readme",
+    "stars": 387
+  },
+  "IPFS": {
+    "link": "https://github.com/ipfs/awesome-ipfs#readme",
+    "stars": 4328
+  },
+  "Fuse": {
+    "link": "https://github.com/fuse-compound/awesome-fuse#readme",
+    "stars": 338
+  },
+  "Heroku": {
+    "link": "https://github.com/ianstormtaylor/awesome-heroku#readme",
+    "stars": 306
+  },
+  "Raspberry Pi": {
+    "link": "https://github.com/thibmaek/awesome-raspberry-pi#readme",
+    "stars": 13707
+  },
+  "Qt": {
+    "link": "https://github.com/JesseTG/awesome-qt#readme",
+    "stars": 1435
+  },
+  "WebExtensions": {
+    "link": "https://github.com/fregante/Awesome-WebExtensions#readme",
+    "stars": 1330
+  },
+  "Smart TV": {
+    "link": "https://github.com/vitalets/awesome-smart-tv#readme",
+    "stars": 1090
+  },
+  "GNOME": {
+    "link": "https://github.com/Kazhnuz/awesome-gnome#readme",
+    "stars": 1207
+  },
+  "KDE": {
+    "link": "https://github.com/francoism90/awesome-kde#readme",
+    "stars": 494
+  },
+  ".NET": {
+    "link": "https://github.com/quozd/awesome-dotnet#readme",
+    "stars": 19482
+  },
+  "Amazon Alexa": {
+    "link": "https://github.com/miguelmota/awesome-amazon-alexa#readme",
+    "stars": 593
+  },
+  "DigitalOcean": {
+    "link": "https://github.com/jonleibowitz/awesome-digitalocean#readme",
+    "stars": 348
+  },
+  "Flutter": {
+    "link": "https://github.com/Solido/awesome-flutter#readme",
+    "stars": 53973
+  },
+  "Home Assistant": {
+    "link": "https://github.com/frenck/awesome-home-assistant#readme",
+    "stars": 6243
+  },
+  "IBM Cloud": {
+    "link": "https://github.com/victorshinya/awesome-ibmcloud#readme",
+    "stars": 100
+  },
+  "Firebase": {
+    "link": "https://github.com/jthegedus/awesome-firebase#readme",
+    "stars": 725
+  },
+  "Robot Operating System 2.0": {
+    "link": "https://github.com/fkromer/awesome-ros2#readme",
+    "stars": 1717
+  },
+  "Adafruit IO": {
+    "link": "https://github.com/adafruit/awesome-adafruitio#readme",
+    "stars": 63
+  },
+  "Cloudflare": {
+    "link": "https://github.com/irazasyed/awesome-cloudflare#readme",
+    "stars": 756
+  },
+  "Actions on Google": {
+    "link": "https://github.com/ravirupareliya/awesome-actions-on-google#readme",
+    "stars": 92
+  },
+  "ESP": {
+    "link": "https://github.com/agucova/awesome-esp#readme",
+    "stars": 1144
+  },
+  "Deno": {
+    "link": "https://github.com/denolib/awesome-deno#readme",
+    "stars": 4270
+  },
+  "DOS": {
+    "link": "https://github.com/balintkissdev/awesome-dos#readme",
+    "stars": 492
+  },
+  "Nix": {
+    "link": "https://github.com/nix-community/awesome-nix#readme",
+    "stars": 3455
+  },
+  "Integration": {
+    "link": "https://github.com/stn1slv/awesome-integration#readme",
+    "stars": 371
+  },
+  "Node-RED": {
+    "link": "https://github.com/naimo84/awesome-nodered#readme",
+    "stars": 463
+  },
+  "Low Code": {
+    "link": "https://github.com/zenitysec/awesome-low-code#readme",
+    "stars": 354
+  },
+  "Capacitor": {
+    "link": "https://github.com/riderx/awesome-capacitor#readme",
+    "stars": 484
+  },
+  "ArcGIS Developer": {
+    "link": "https://github.com/Esri/awesome-arcgis-developer#readme",
+    "stars": 245
+  },
+  "Bluetooth Low Energy": {
+    "link": "https://github.com/dotintent/awesome-ble#readme",
+    "stars": 77
+  },
+  "Uno Platform": {
+    "link": "https://github.com/MartinZikmund/awesome-uno-platform#readme",
+    "stars": 45
+  },
+  "Google Cloud": {
+    "link": "https://github.com/GoogleCloudPlatform/awesome-google-cloud#readme",
+    "stars": 800
+  },
+  "JavaScript": {
+    "link": "https://github.com/sorrycc/awesome-javascript#readme",
+    "stars": 33766
+  },
+  "Swift": {
+    "link": "https://github.com/matteocrippa/awesome-swift#readme",
+    "stars": 24943
+  },
+  "Python": {
+    "link": "https://github.com/vinta/awesome-python#readme",
+    "stars": 226909
+  },
+  "Rust": {
+    "link": "https://github.com/rust-unofficial/awesome-rust#readme",
+    "stars": 47425
+  },
+  "Haskell": {
+    "link": "https://github.com/krispo/awesome-haskell#readme",
+    "stars": 3112
+  },
+  "PureScript": {
+    "link": "https://github.com/passy/awesome-purescript#readme",
+    "stars": 467
+  },
+  "Go": {
+    "link": "https://github.com/avelino/awesome-go#readme",
+    "stars": 134072
+  },
+  "Scala": {
+    "link": "https://github.com/lauris/awesome-scala#readme",
+    "stars": 9050
+  },
+  "Ruby": {
+    "link": "https://github.com/markets/awesome-ruby#readme",
+    "stars": 13622
+  },
+  "Clojure": {
+    "link": "https://github.com/razum2um/awesome-clojure#readme",
+    "stars": 2707
+  },
+  "ClojureScript": {
+    "link": "https://github.com/hantuzun/awesome-clojurescript#readme",
+    "stars": 1046
+  },
+  "Elixir": {
+    "link": "https://github.com/h4cc/awesome-elixir#readme",
+    "stars": 12707
+  },
+  "Elm": {
+    "link": "https://github.com/sporto/awesome-elm#readme",
+    "stars": 3613
+  },
+  "Erlang": {
+    "link": "https://github.com/drobakowski/awesome-erlang#readme",
+    "stars": 1642
+  },
+  "Julia": {
+    "link": "https://github.com/svaksha/Julia.jl#readme",
+    "stars": 1444
+  },
+  "Lua": {
+    "link": "https://github.com/LewisJEllis/awesome-lua#readme",
+    "stars": 4007
+  },
+  "C": {
+    "link": "https://github.com/inputsh/awesome-c#readme",
+    "stars": 3504
+  },
+  "C/C++": {
+    "link": "https://github.com/fffaraz/awesome-cpp#readme",
+    "stars": 60482
+  },
+  "R": {
+    "link": "https://github.com/qinwf/awesome-R#readme",
+    "stars": 6040
+  },
+  "D": {
+    "link": "https://github.com/dlang-community/awesome-d#readme",
+    "stars": 666
+  },
+  "Common Lisp": {
+    "link": "https://github.com/CodyReichert/awesome-cl#readme",
+    "stars": 2615
+  },
+  "Perl": {
+    "link": "https://github.com/hachiojipm/awesome-perl#readme",
+    "stars": 680
+  },
+  "Groovy": {
+    "link": "https://github.com/kdabir/awesome-groovy#readme",
+    "stars": 719
+  },
+  "Dart": {
+    "link": "https://github.com/yissachar/awesome-dart#readme",
+    "stars": 2367
+  },
+  "Java": {
+    "link": "https://github.com/akullpp/awesome-java#readme",
+    "stars": 42121
+  },
+  "Kotlin": {
+    "link": "https://github.com/KotlinBy/awesome-kotlin#readme",
+    "stars": 11048
+  },
+  "OCaml": {
+    "link": "https://github.com/ocaml-community/awesome-ocaml#readme",
+    "stars": 2816
+  },
+  "ColdFusion": {
+    "link": "https://github.com/seancoyne/awesome-coldfusion#readme",
+    "stars": 106
+  },
+  "Fortran": {
+    "link": "https://github.com/rabbiabram/awesome-fortran#readme",
+    "stars": 378
+  },
+  "PHP": {
+    "link": "https://github.com/ziadoz/awesome-php#readme",
+    "stars": 31070
+  },
+  "Pascal": {
+    "link": "https://github.com/Fr0sT-Brutal/awesome-pascal#readme",
+    "stars": 1836
+  },
+  "AutoHotkey": {
+    "link": "https://github.com/ahkscript/awesome-AutoHotkey#readme",
+    "stars": 2676
+  },
+  "AutoIt": {
+    "link": "https://github.com/J2TeaM/awesome-AutoIt#readme",
+    "stars": 878
+  },
+  "Crystal": {
+    "link": "https://github.com/veelenga/awesome-crystal#readme",
+    "stars": 3389
+  },
+  "Frege": {
+    "link": "https://github.com/sfischer13/awesome-frege#readme",
+    "stars": 28
+  },
+  "CMake": {
+    "link": "https://github.com/onqtam/awesome-cmake#readme",
+    "stars": 5089
+  },
+  "ActionScript 3": {
+    "link": "https://github.com/robinrodricks/awesome-actionscript3#readme",
+    "stars": 244
+  },
+  "Eta": {
+    "link": "https://github.com/sfischer13/awesome-eta#readme",
+    "stars": 61
+  },
+  "Idris": {
+    "link": "https://github.com/joaomilho/awesome-idris#readme",
+    "stars": 392
+  },
+  "Ada/SPARK": {
+    "link": "https://github.com/ohenley/awesome-ada#readme",
+    "stars": 653
+  },
+  "Q#": {
+    "link": "https://github.com/ebraminio/awesome-qsharp#readme",
+    "stars": 163
+  },
+  "Imba": {
+    "link": "https://github.com/koolamusic/awesome-imba#readme",
+    "stars": 131
+  },
+  "Vala": {
+    "link": "https://github.com/desiderantes/awesome-vala#readme",
+    "stars": 174
+  },
+  "Coq": {
+    "link": "https://github.com/coq-community/awesome-coq#readme",
+    "stars": 323
+  },
+  "V": {
+    "link": "https://github.com/vlang/awesome-v#readme",
+    "stars": 1909
+  },
+  "Zig": {
+    "link": "https://github.com/catdevnull/awesome-zig#readme",
+    "stars": 392
+  },
+  "Move": {
+    "link": "https://github.com/MystenLabs/awesome-move#readme",
+    "stars": 1393
+  },
+  "Esolangs": {
+    "link": "https://github.com/angrykoala/awesome-esolangs#readme",
+    "stars": 512
+  },
+  "ES6 Tools": {
+    "link": "https://github.com/addyosmani/es6-tools#readme",
+    "stars": 3977
+  },
+  "Web Performance Optimization": {
+    "link": "https://github.com/davidsonfellipe/awesome-wpo#readme",
+    "stars": 8391
+  },
+  "Web Tools": {
+    "link": "https://github.com/lvwzhen/tools#readme",
+    "stars": 1139
+  },
+  "CSS": {
+    "link": "https://github.com/awesome-css-group/awesome-css#readme",
+    "stars": 5088
+  },
+  "React": {
+    "link": "https://github.com/enaqx/awesome-react#readme",
+    "stars": 65875
+  },
+  "Web Components": {
+    "link": "https://github.com/web-padawan/awesome-web-components#readme",
+    "stars": 2957
+  },
+  "Polymer": {
+    "link": "https://github.com/Granze/awesome-polymer#readme",
+    "stars": 399
+  },
+  "Angular": {
+    "link": "https://github.com/PatrickJS/awesome-angular#readme",
+    "stars": 9548
+  },
+  "Backbone": {
+    "link": "https://github.com/sadcitizen/awesome-backbone#readme",
+    "stars": 403
+  },
+  "HTML5": {
+    "link": "https://github.com/diegocard/awesome-html5#readme",
+    "stars": 2564
+  },
+  "SVG": {
+    "link": "https://github.com/willianjusten/awesome-svg#readme",
+    "stars": 4544
+  },
+  "Canvas": {
+    "link": "https://github.com/raphamorim/awesome-canvas#readme",
+    "stars": 1628
+  },
+  "KnockoutJS": {
+    "link": "https://github.com/dnbard/awesome-knockout#readme",
+    "stars": 100
+  },
+  "Dojo Toolkit": {
+    "link": "https://github.com/petk/awesome-dojo#readme",
+    "stars": 87
+  },
+  "Inspiration": {
+    "link": "https://github.com/NoahBuscher/Inspire#readme",
+    "stars": 1213
+  },
+  "Ember": {
+    "link": "https://github.com/ember-community-russia/awesome-ember#readme",
+    "stars": 194
+  },
+  "Android UI": {
+    "link": "https://github.com/wasabeef/awesome-android-ui#readme",
+    "stars": 50940
+  },
+  "iOS UI": {
+    "link": "https://github.com/cjwirth/awesome-ios-ui#readme",
+    "stars": 11125
+  },
+  "Meteor": {
+    "link": "https://github.com/Urigo/awesome-meteor#readme",
+    "stars": 1418
+  },
+  "BEM": {
+    "link": "https://github.com/sturobson/BEM-resources#readme",
+    "stars": 493
+  },
+  "Flexbox": {
+    "link": "https://github.com/afonsopacifer/awesome-flexbox#readme",
+    "stars": 1234
+  },
+  "Web Typography": {
+    "link": "https://github.com/deanhume/typography#readme",
+    "stars": 644
+  },
+  "Web Accessibility": {
+    "link": "https://github.com/brunopulis/awesome-a11y#readme",
+    "stars": 1825
+  },
+  "Material Design": {
+    "link": "https://github.com/sachin1092/awesome-material#readme",
+    "stars": 630
+  },
+  "D3": {
+    "link": "https://github.com/wbkd/awesome-d3#readme",
+    "stars": 5213
+  },
+  "Emails": {
+    "link": "https://github.com/jonathandion/awesome-emails#readme",
+    "stars": 2440
+  },
+  "jQuery": {
+    "link": "https://github.com/petk/awesome-jquery#readme",
+    "stars": 937
+  },
+  "Web Audio": {
+    "link": "https://github.com/notthetup/awesome-webaudio#readme",
+    "stars": 1152
+  },
+  "Offline-First": {
+    "link": "https://github.com/pazguille/offline-first#readme",
+    "stars": 3154
+  },
+  "Static Website Services": {
+    "link": "https://github.com/agarrharr/awesome-static-website-services#readme",
+    "stars": 1867
+  },
+  "Cycle.js": {
+    "link": "https://github.com/cyclejs-community/awesome-cyclejs#readme",
+    "stars": 827
+  },
+  "Text Editing": {
+    "link": "https://github.com/dok/awesome-text-editing#readme",
+    "stars": 282
+  },
+  "Motion UI Design": {
+    "link": "https://github.com/fliptheweb/motion-ui-design#readme",
+    "stars": 824
+  },
+  "Vue.js": {
+    "link": "https://github.com/vuejs/awesome-vue#readme",
+    "stars": 72322
+  },
+  "Marionette.js": {
+    "link": "https://github.com/sadcitizen/awesome-marionette#readme",
+    "stars": 155
+  },
+  "Aurelia": {
+    "link": "https://github.com/aurelia-contrib/awesome-aurelia#readme",
+    "stars": 309
+  },
+  "Charting": {
+    "link": "https://github.com/zingchart/awesome-charting#readme",
+    "stars": 2001
+  },
+  "Ionic Framework": {
+    "link": "https://github.com/candelibas/awesome-ionic#readme",
+    "stars": 849
+  },
+  "Chrome DevTools": {
+    "link": "https://github.com/ChromeDevTools/awesome-chrome-devtools#readme",
+    "stars": 6164
+  },
+  "PostCSS": {
+    "link": "https://github.com/jdrgomes/awesome-postcss#readme",
+    "stars": 430
+  },
+  "Draft.js": {
+    "link": "https://github.com/nikgraf/awesome-draft-js#readme",
+    "stars": 2494
+  },
+  "Service Workers": {
+    "link": "https://github.com/TalAter/awesome-service-workers#readme",
+    "stars": 1655
+  },
+  "Progressive Web Apps": {
+    "link": "https://github.com/TalAter/awesome-progressive-web-apps#readme",
+    "stars": 1545
+  },
+  "choo": {
+    "link": "https://github.com/choojs/awesome-choo#readme",
+    "stars": 198
+  },
+  "Redux": {
+    "link": "https://github.com/brillout/awesome-redux#readme",
+    "stars": 382
+  },
+  "Browserify": {
+    "link": "https://github.com/browserify/awesome-browserify#readme",
+    "stars": 89
+  },
+  "Sass": {
+    "link": "https://github.com/Famolus/awesome-sass#readme",
+    "stars": 1881
+  },
+  "Ant Design": {
+    "link": "https://github.com/websemantics/awesome-ant-design#readme",
+    "stars": 3160
+  },
+  "Less": {
+    "link": "https://github.com/LucasBassetti/awesome-less#readme",
+    "stars": 63
+  },
+  "WebGL": {
+    "link": "https://github.com/sjfricke/awesome-webgl#readme",
+    "stars": 1355
+  },
+  "Preact": {
+    "link": "https://github.com/preactjs/awesome-preact#readme",
+    "stars": 905
+  },
+  "Progressive Enhancement": {
+    "link": "https://github.com/jbmoelker/progressive-enhancement-resources#readme",
+    "stars": 133
+  },
+  "Next.js": {
+    "link": "https://github.com/unicodeveloper/awesome-nextjs#readme",
+    "stars": 10415
+  },
+  "lit": {
+    "link": "https://github.com/web-padawan/awesome-lit#readme",
+    "stars": 1525
+  },
+  "JAMstack": {
+    "link": "https://github.com/automata/awesome-jamstack#readme",
+    "stars": 1327
+  },
+  "WordPress-Gatsby": {
+    "link": "https://github.com/henrikwirth/awesome-wordpress-gatsby#readme",
+    "stars": 265
+  },
+  "Mobile Web Development": {
+    "link": "https://github.com/myshov/awesome-mobile-web-development#readme",
+    "stars": 1229
+  },
+  "Storybook": {
+    "link": "https://github.com/lauthieb/awesome-storybook#readme",
+    "stars": 379
+  },
+  "Blazor": {
+    "link": "https://github.com/AdrienTorris/awesome-blazor#readme",
+    "stars": 8875
+  },
+  "PageSpeed Metrics": {
+    "link": "https://github.com/csabapalfi/awesome-pagespeed-metrics#readme",
+    "stars": 677
+  },
+  "Tailwind CSS": {
+    "link": "https://github.com/aniftyco/awesome-tailwindcss#readme",
+    "stars": 13657
+  },
+  "Seed": {
+    "link": "https://github.com/seed-rs/awesome-seed-rs#readme",
+    "stars": 214
+  },
+  "Web Performance Budget": {
+    "link": "https://github.com/pajaydev/awesome-web-performance-budget#readme",
+    "stars": 113
+  },
+  "Web Animation": {
+    "link": "https://github.com/sergey-pimenov/awesome-web-animation#readme",
+    "stars": 1344
+  },
+  "Yew": {
+    "link": "https://github.com/jetli/awesome-yew#readme",
+    "stars": 1504
+  },
+  "Material-UI": {
+    "link": "https://github.com/nadunindunil/awesome-material-ui#readme",
+    "stars": 233
+  },
+  "Building Blocks for Web Apps": {
+    "link": "https://github.com/componently-com/awesome-building-blocks-for-web-apps#readme",
+    "stars": 158
+  },
+  "Svelte": {
+    "link": "https://github.com/TheComputerM/awesome-svelte#readme",
+    "stars": 1560
+  },
+  "Design systems": {
+    "link": "https://github.com/klaufel/awesome-design-systems#readme",
+    "stars": 727
+  },
+  "Inertia.js": {
+    "link": "https://github.com/innocenzi/awesome-inertiajs#readme",
+    "stars": 238
+  },
+  "MDBootstrap": {
+    "link": "https://github.com/mdbootstrap/awesome-mdbootstrap#readme",
+    "stars": 49
+  },
+  "Master CSS": {
+    "link": "https://github.com/master-co/awesome-master-css#readme",
+    "stars": 28
+  },
+  "Hydrogen": {
+    "link": "https://github.com/shopify/awesome-hydrogen#readme",
+    "stars": 162
+  },
+  "Tiny JS": {
+    "link": "https://github.com/thoughtspile/awesome-tiny-js#readme",
+    "stars": 705
+  },
+  "Frontend GIS": {
+    "link": "https://github.com/joewdavies/awesome-frontend-gis#readme",
+    "stars": 466
+  },
+  "Flask": {
+    "link": "https://github.com/mjhea0/awesome-flask#readme",
+    "stars": 1507
+  },
+  "Docker": {
+    "link": "https://github.com/veggiemonk/awesome-docker#readme",
+    "stars": 30660
+  },
+  "Vagrant": {
+    "link": "https://github.com/iJackUA/awesome-vagrant#readme",
+    "stars": 605
+  },
+  "Pyramid": {
+    "link": "https://github.com/uralbash/awesome-pyramid#readme",
+    "stars": 554
+  },
+  "Play1 Framework": {
+    "link": "https://github.com/PerfectCarl/awesome-play1#readme",
+    "stars": 42
+  },
+  "CakePHP": {
+    "link": "https://github.com/friendsofcake/awesome-cakephp#readme",
+    "stars": 909
+  },
+  "Symfony": {
+    "link": "https://github.com/sitepoint-editors/awesome-symfony#readme",
+    "stars": 1546
+  },
+  "Laravel": {
+    "link": "https://github.com/chiraggude/awesome-laravel#readme",
+    "stars": 12570
+  },
+  "Rails": {
+    "link": "https://github.com/gramantin/awesome-rails#readme",
+    "stars": 3713
+  },
+  "Phalcon": {
+    "link": "https://github.com/phalcon/awesome-phalcon#readme",
+    "stars": 609
+  },
+  "Useful `.htaccess` Snippets": {
+    "link": "https://github.com/phanan/htaccess#readme",
+    "stars": 12760
+  },
+  "nginx": {
+    "link": "https://github.com/fcambus/nginx-resources#readme",
+    "stars": 3573
+  },
+  "Dropwizard": {
+    "link": "https://github.com/stve/awesome-dropwizard#readme",
+    "stars": 94
+  },
+  "Kubernetes": {
+    "link": "https://github.com/ramitsurana/awesome-kubernetes#readme",
+    "stars": 15110
+  },
+  "Lumen": {
+    "link": "https://github.com/unicodeveloper/awesome-lumen#readme",
+    "stars": 327
+  },
+  "Serverless Framework": {
+    "link": "https://github.com/pmuens/awesome-serverless#readme",
+    "stars": 2147
+  },
+  "Apache Wicket": {
+    "link": "https://github.com/PhantomYdn/awesome-wicket#readme",
+    "stars": 79
+  },
+  "Vert.x": {
+    "link": "https://github.com/vert-x3/vertx-awesome#readme",
+    "stars": 2185
+  },
+  "Terraform": {
+    "link": "https://github.com/shuaibiyy/awesome-terraform#readme",
+    "stars": 5555
+  },
+  "Vapor": {
+    "link": "https://github.com/vapor-community/awesome-vapor#readme",
+    "stars": 1196
+  },
+  "Dash": {
+    "link": "https://github.com/ucg8j/awesome-dash#readme",
+    "stars": 2133
+  },
+  "FastAPI": {
+    "link": "https://github.com/mjhea0/awesome-fastapi#readme",
+    "stars": 8782
+  },
+  "CDK": {
+    "link": "https://github.com/kolomied/awesome-cdk#readme",
+    "stars": 2012
+  },
+  "IAM": {
+    "link": "https://github.com/kdeldycke/awesome-iam#readme",
+    "stars": 1776
+  },
+  "Slim": {
+    "link": "https://github.com/nekofar/awesome-slim#readme",
+    "stars": 33
+  },
+  "Fiber": {
+    "link": "https://github.com/gofiber/awesome-fiber#readme",
+    "stars": 550
+  },
+  "Kustomize": {
+    "link": "https://github.com/DevOpsHiveHQ/awesome-kustomize#readme",
+    "stars": 97
+  },
+  "OpenTofu": {
+    "link": "https://github.com/virtualroot/awesome-opentofu#readme",
+    "stars": 96
+  },
+  "Reflex": {
+    "link": "https://github.com/reflex-dev/awesome-reflex#readme",
+    "stars": 35
+  },
+  "University Courses": {
+    "link": "https://github.com/prakhar1989/awesome-courses#readme",
+    "stars": 57882
+  },
+  "Data Science": {
+    "link": "https://github.com/academic/awesome-datascience#readme",
+    "stars": 25311
+  },
+  "Machine Learning": {
+    "link": "https://github.com/josephmisiti/awesome-machine-learning#readme",
+    "stars": 66288
+  },
+  "Speech and Natural Language Processing": {
+    "link": "https://github.com/edobashira/speech-language-processing#readme",
+    "stars": 2207
+  },
+  "Linguistics": {
+    "link": "https://github.com/theimpossibleastronaut/awesome-linguistics#readme",
+    "stars": 375
+  },
+  "Cryptography": {
+    "link": "https://github.com/sobolevn/awesome-cryptography#readme",
+    "stars": 5933
+  },
+  "Computer Vision": {
+    "link": "https://github.com/jbhuang0604/awesome-computer-vision#readme",
+    "stars": 21105
+  },
+  "Deep Learning": {
+    "link": "https://github.com/ChristosChristofidis/awesome-deep-learning#readme",
+    "stars": 24388
+  },
+  "Deep Vision": {
+    "link": "https://github.com/kjw0612/awesome-deep-vision#readme",
+    "stars": 10836
+  },
+  "Open Source Society University": {
+    "link": "https://github.com/ossu/computer-science#readme",
+    "stars": 173084
+  },
+  "Functional Programming": {
+    "link": "https://github.com/lucasviola/awesome-functional-programming#readme",
+    "stars": 966
+  },
+  "Empirical Software Engineering": {
+    "link": "https://github.com/dspinellis/awesome-msr#readme",
+    "stars": 421
+  },
+  "Static Analysis & Code Quality": {
+    "link": "https://github.com/analysis-tools-dev/static-analysis#readme",
+    "stars": 13416
+  },
+  "Information Retrieval": {
+    "link": "https://github.com/harpribot/awesome-information-retrieval#readme",
+    "stars": 1075
+  },
+  "Quantum Computing": {
+    "link": "https://github.com/desireevl/awesome-quantum-computing#readme",
+    "stars": 2591
+  },
+  "Theoretical Computer Science": {
+    "link": "https://github.com/mostafatouny/awesome-theoretical-computer-science#readme",
+    "stars": 744
+  },
+  "Conversational AI": {
+    "link": "https://github.com/jyguyomarch/awesome-conversational-ai#readme",
+    "stars": 194
+  },
+  "Generative AI": {
+    "link": "https://github.com/steven2358/awesome-generative-ai#readme",
+    "stars": 5963
+  },
+  "Big Data": {
+    "link": "https://github.com/0xnr/awesome-bigdata#readme",
+    "stars": 13300
+  },
+  "Public Datasets": {
+    "link": "https://github.com/awesomedata/awesome-public-datasets#readme",
+    "stars": 61308
+  },
+  "Hadoop": {
+    "link": "https://github.com/youngwookim/awesome-hadoop#readme",
+    "stars": 1091
+  },
+  "Data Engineering": {
+    "link": "https://github.com/igorbarinov/awesome-data-engineering#readme",
+    "stars": 6869
+  },
+  "Streaming": {
+    "link": "https://github.com/manuzhang/awesome-streaming#readme",
+    "stars": 2716
+  },
+  "Apache Spark": {
+    "link": "https://github.com/awesome-spark/awesome-spark#readme",
+    "stars": 1731
+  },
+  "Qlik": {
+    "link": "https://github.com/ambster-public/awesome-qlik#readme",
+    "stars": 61
+  },
+  "Splunk": {
+    "link": "https://github.com/sduff/awesome-splunk#readme",
+    "stars": 126
+  },
+  "Network Analysis": {
+    "link": "https://github.com/briatte/awesome-network-analysis#readme",
+    "stars": 3587
+  },
+  "Papers We Love": {
+    "link": "https://github.com/papers-we-love/papers-we-love#readme",
+    "stars": 88652
+  },
+  "Talks": {
+    "link": "https://github.com/JanVanRyswyck/awesome-talks#readme",
+    "stars": 6099
+  },
+  "Algorithms": {
+    "link": "https://github.com/tayllan/awesome-algorithms#readme",
+    "stars": 21059
+  },
+  "Algorithm Visualizations": {
+    "link": "https://github.com/enjalot/algovis#readme",
+    "stars": 1666
+  },
+  "Artificial Intelligence": {
+    "link": "https://github.com/owainlewis/awesome-artificial-intelligence#readme",
+    "stars": 11034
+  },
+  "Search Engine Optimization": {
+    "link": "https://github.com/marcobiedermann/search-engine-optimization#readme",
+    "stars": 2453
+  },
+  "Competitive Programming": {
+    "link": "https://github.com/lnishan/awesome-competitive-programming#readme",
+    "stars": 12788
+  },
+  "Math": {
+    "link": "https://github.com/rossant/awesome-math#readme",
+    "stars": 8952
+  },
+  "Recursion Schemes": {
+    "link": "https://github.com/passy/awesome-recursion-schemes#readme",
+    "stars": 1223
+  },
+  "Audit Algorithms": {
+    "link": "https://github.com/erwanlemerrer/awesome-audit-algorithms#readme",
+    "stars": 94
+  },
+  "AGI & CoCoSci": {
+    "link": "https://github.com/YuzheSHI/awesome-agi-cocosci#readme",
+    "stars": 295
+  },
+  "Complex Systems": {
+    "link": "https://github.com/sellisd/awesome-complexity#readme",
+    "stars": 180
+  },
+  "VLM Architectures": {
+    "link": "https://github.com/gokayfem/awesome-vlm-architectures#readme",
+    "stars": 484
+  },
+  "Free Programming Books": {
+    "link": "https://github.com/EbookFoundation/free-programming-books#readme",
+    "stars": 341088
+  },
+  "Go Books": {
+    "link": "https://github.com/dariubs/GoBooks#readme",
+    "stars": 17243
+  },
+  "R Books": {
+    "link": "https://github.com/RomanTsegelskyi/rbooks#readme",
+    "stars": 243
+  },
+  "Mind Expanding Books": {
+    "link": "https://github.com/hackerkid/Mind-Expanding-Books#readme",
+    "stars": 11867
+  },
+  "Book Authoring": {
+    "link": "https://github.com/TalAter/awesome-book-authoring#readme",
+    "stars": 363
+  },
+  "Elixir Books": {
+    "link": "https://github.com/sger/ElixirBooks#readme",
+    "stars": 1416
+  },
+  "Sublime Text": {
+    "link": "https://github.com/dreikanter/sublime-bookmarks#readme",
+    "stars": 1026
+  },
+  "Vim": {
+    "link": "https://github.com/mhinz/vim-galore#readme",
+    "stars": 16934
+  },
+  "Neovim": {
+    "link": "https://github.com/rockerBOO/awesome-neovim#readme",
+    "stars": 16382
+  },
+  "Emacs": {
+    "link": "https://github.com/emacs-tw/awesome-emacs#readme",
+    "stars": 8612
+  },
+  "Atom": {
+    "link": "https://github.com/mehcode/awesome-atom#readme",
+    "stars": 1903
+  },
+  "Visual Studio Code": {
+    "link": "https://github.com/viatsko/awesome-vscode#readme",
+    "stars": 25190
+  },
+  "Game Development": {
+    "link": "https://github.com/ellisonleao/magictools#readme",
+    "stars": 13737
+  },
+  "Game Talks": {
+    "link": "https://github.com/hzoo/awesome-gametalks#readme",
+    "stars": 1079
+  },
+  "Godot": {
+    "link": "https://github.com/godotengine/awesome-godot#readme",
+    "stars": 7099
+  },
+  "Open Source Games": {
+    "link": "https://github.com/michelpereira/awesome-open-source-games#readme",
+    "stars": 1661
+  },
+  "Unity": {
+    "link": "https://github.com/RyanNielson/awesome-unity#readme",
+    "stars": 6679
+  },
+  "Chess": {
+    "link": "https://github.com/hkirat/awesome-chess#readme",
+    "stars": 400
+  },
+  "LÖVE": {
+    "link": "https://github.com/love2d-community/awesome-love2d#readme",
+    "stars": 3340
+  },
+  "PICO-8": {
+    "link": "https://github.com/pico-8/awesome-PICO-8#readme",
+    "stars": 2651
+  },
+  "Game Boy Development": {
+    "link": "https://github.com/gbdev/awesome-gbdev#readme",
+    "stars": 4031
+  },
+  "Construct 2": {
+    "link": "https://github.com/ConstructCommunity/awesome-construct#readme",
+    "stars": 71
+  },
+  "Gideros": {
+    "link": "https://github.com/stetso/awesome-gideros#readme",
+    "stars": 27
+  },
+  "Minecraft": {
+    "link": "https://github.com/bs-community/awesome-minecraft#readme",
+    "stars": 463
+  },
+  "ComputerCraft": {
+    "link": "https://github.com/tomodachi94/awesome-computercraft#readme",
+    "stars": 170
+  },
+  "Game Datasets": {
+    "link": "https://github.com/leomaurodesenv/game-datasets#readme",
+    "stars": 756
+  },
+  "Haxe Game Development": {
+    "link": "https://github.com/Dvergar/awesome-haxe-gamedev#readme",
+    "stars": 385
+  },
+  "libGDX": {
+    "link": "https://github.com/rafaskb/awesome-libgdx#readme",
+    "stars": 1039
+  },
+  "PlayCanvas": {
+    "link": "https://github.com/playcanvas/awesome-playcanvas#readme",
+    "stars": 261
+  },
+  "Game Remakes": {
+    "link": "https://github.com/radek-sprta/awesome-game-remakes#readme",
+    "stars": 870
+  },
+  "Flame": {
+    "link": "https://github.com/flame-engine/awesome-flame#readme",
+    "stars": 1090
+  },
+  "Discord Communities": {
+    "link": "https://github.com/mhxion/awesome-discord-communities#readme",
+    "stars": 2865
+  },
+  "CHIP-8": {
+    "link": "https://github.com/tobiasvl/awesome-chip-8#readme",
+    "stars": 168
+  },
+  "Games of Coding": {
+    "link": "https://github.com/michelpereira/awesome-games-of-coding#readme",
+    "stars": 1928
+  },
+  "Esports": {
+    "link": "https://github.com/strift/awesome-esports#readme",
+    "stars": 71
+  },
+  "Learn Gamedev": {
+    "link": "https://github.com/notpresident35/awesome-learn-gamedev#readme",
+    "stars": 2737
+  },
+  "Game Engine Development": {
+    "link": "https://github.com/stevinz/awesome-game-engine-dev#readme",
+    "stars": 972
+  },
+  "GameMaker": {
+    "link": "https://github.com/bytecauldron/awesome-gamemaker#readme",
+    "stars": 288
+  },
+  "Game Production": {
+    "link": "https://github.com/vhladiienko/awesome-game-production#readme",
+    "stars": 108
+  },
+  "Babylon.js": {
+    "link": "https://github.com/Symbitic/awesome-babylonjs#readme",
+    "stars": 252
+  },
+  "Quick Look Plugins": {
+    "link": "https://github.com/sindresorhus/quick-look-plugins#readme",
+    "stars": 18100
+  },
+  "Dev Env": {
+    "link": "https://github.com/jondot/awesome-devenv#readme",
+    "stars": 2863
+  },
+  "Dotfiles": {
+    "link": "https://github.com/webpro/awesome-dotfiles#readme",
+    "stars": 9261
+  },
+  "Shell": {
+    "link": "https://github.com/alebcay/awesome-shell#readme",
+    "stars": 33314
+  },
+  "Fish": {
+    "link": "https://github.com/jorgebucaran/awsm.fish#readme",
+    "stars": 4245
+  },
+  "Command-Line Apps": {
+    "link": "https://github.com/agarrharr/awesome-cli-apps#readme",
+    "stars": 15477
+  },
+  "ZSH Plugins": {
+    "link": "https://github.com/unixorn/awesome-zsh-plugins#readme",
+    "stars": 15610
+  },
+  "GitHub": {
+    "link": "https://github.com/phillipadsmith/awesome-github#readme",
+    "stars": 876
+  },
+  "Git Cheat Sheet & Git Flow": {
+    "link": "https://github.com/arslanbilal/git-cheat-sheet#readme",
+    "stars": 6923
+  },
+  "Git Tips": {
+    "link": "https://github.com/git-tips/tips#readme",
+    "stars": 21405
+  },
+  "Git Add-ons": {
+    "link": "https://github.com/stevemao/awesome-git-addons#readme",
+    "stars": 1970
+  },
+  "Git Hooks": {
+    "link": "https://github.com/compscilauren/awesome-git-hooks#readme",
+    "stars": 991
+  },
+  "SSH": {
+    "link": "https://github.com/moul/awesome-ssh#readme",
+    "stars": 2504
+  },
+  "FOSS for Developers": {
+    "link": "https://github.com/tvvocold/FOSS-for-Dev#readme",
+    "stars": 1108
+  },
+  "Hyper": {
+    "link": "https://github.com/bnb/awesome-hyper#readme",
+    "stars": 10743
+  },
+  "PowerShell": {
+    "link": "https://github.com/janikvonrotz/awesome-powershell#readme",
+    "stars": 4888
+  },
+  "Alfred Workflows": {
+    "link": "https://github.com/alfred-workflows/awesome-alfred-workflows#readme",
+    "stars": 3102
+  },
+  "Terminals Are Sexy": {
+    "link": "https://github.com/k4m4/terminals-are-sexy#readme",
+    "stars": 12310
+  },
+  "GitHub Actions": {
+    "link": "https://github.com/sdras/awesome-actions#readme",
+    "stars": 25307
+  },
+  "Science Fiction": {
+    "link": "https://github.com/sindresorhus/awesome-scifi#readme",
+    "stars": 4321
+  },
+  "Fantasy": {
+    "link": "https://github.com/RichardLitt/awesome-fantasy#readme",
+    "stars": 1291
+  },
+  "Podcasts": {
+    "link": "https://github.com/ayr-ton/awesome-geek-podcasts#readme",
+    "stars": 561
+  },
+  "Email Newsletters": {
+    "link": "https://github.com/zudochkin/awesome-newsletters#readme",
+    "stars": 3935
+  },
+  "IT Quotes": {
+    "link": "https://github.com/victorlaerte/awesome-it-quotes#readme",
+    "stars": 561
+  },
+  "Database": {
+    "link": "https://github.com/numetriclabz/awesome-db#readme",
+    "stars": 1267
+  },
+  "MySQL": {
+    "link": "https://github.com/shlomi-noach/awesome-mysql#readme",
+    "stars": 2374
+  },
+  "SQLAlchemy": {
+    "link": "https://github.com/dahlia/awesome-sqlalchemy#readme",
+    "stars": 2853
+  },
+  "InfluxDB": {
+    "link": "https://github.com/mark-rushakoff/awesome-influxdb#readme",
+    "stars": 808
+  },
+  "Neo4j": {
+    "link": "https://github.com/neueda/awesome-neo4j#readme",
+    "stars": 519
+  },
+  "MongoDB": {
+    "link": "https://github.com/ramnes/awesome-mongodb#readme",
+    "stars": 2495
+  },
+  "RethinkDB": {
+    "link": "https://github.com/d3viant0ne/awesome-rethinkdb#readme",
+    "stars": 114
+  },
+  "TinkerPop": {
+    "link": "https://github.com/mohataher/awesome-tinkerpop#readme",
+    "stars": 183
+  },
+  "PostgreSQL": {
+    "link": "https://github.com/dhamaniasad/awesome-postgres#readme",
+    "stars": 10108
+  },
+  "CouchDB": {
+    "link": "https://github.com/quangv/awesome-couchdb#readme",
+    "stars": 178
+  },
+  "HBase": {
+    "link": "https://github.com/rayokota/awesome-hbase#readme",
+    "stars": 170
+  },
+  "NoSQL Guides": {
+    "link": "https://github.com/erictleung/awesome-nosql-guides#readme",
+    "stars": 261
+  },
+  "Database Tools": {
+    "link": "https://github.com/mgramin/awesome-db-tools#readme",
+    "stars": 4235
+  },
+  "TypeDB": {
+    "link": "https://github.com/vaticle/typedb-awesome#readme",
+    "stars": 65
+  },
+  "Cassandra": {
+    "link": "https://github.com/Anant/awesome-cassandra#readme",
+    "stars": 292
+  },
+  "TDengine": {
+    "link": "https://github.com/taosdata/awesome-tdengine#readme",
+    "stars": 55
+  },
+  "Supabase": {
+    "link": "https://github.com/lyqht/awesome-supabase#readme",
+    "stars": 304
+  },
+  "PocketBase": {
+    "link": "https://github.com/benallfree/awesome-pocketbase#readme",
+    "stars": 789
+  },
+  "Neon": {
+    "link": "https://github.com/tyaga001/awesome-neon#readme",
+    "stars": 11
+  },
+  "Creative Commons Media": {
+    "link": "https://github.com/shime/creative-commons-media#readme",
+    "stars": 603
+  },
+  "Fonts": {
+    "link": "https://github.com/brabadu/awesome-fonts#readme",
+    "stars": 1599
+  },
+  "Codeface": {
+    "link": "https://github.com/chrissimpkins/codeface#readme",
+    "stars": 6221
+  },
+  "Stock Resources": {
+    "link": "https://github.com/neutraltone/awesome-stock-resources#readme",
+    "stars": 13074
+  },
+  "GIF": {
+    "link": "https://github.com/davisonio/awesome-gif#readme",
+    "stars": 612
+  },
+  "Music": {
+    "link": "https://github.com/ciconia/awesome-music#readme",
+    "stars": 1895
+  },
+  "Open Source Documents": {
+    "link": "https://github.com/44bits/awesome-opensource-documents#readme",
+    "stars": 2007
+  },
+  "Audio Visualization": {
+    "link": "https://github.com/willianjusten/awesome-audio-visualization#readme",
+    "stars": 4656
+  },
+  "Broadcasting": {
+    "link": "https://github.com/ebu/awesome-broadcasting#readme",
+    "stars": 1490
+  },
+  "Pixel Art": {
+    "link": "https://github.com/Siilwyn/awesome-pixel-art#readme",
+    "stars": 1034
+  },
+  "FFmpeg": {
+    "link": "https://github.com/transitive-bullshit/awesome-ffmpeg#readme",
+    "stars": 996
+  },
+  "Icons": {
+    "link": "https://github.com/notlmn/awesome-icons#readme",
+    "stars": 774
+  },
+  "Audiovisual": {
+    "link": "https://github.com/stingalleman/awesome-audiovisual#readme",
+    "stars": 186
+  },
+  "VLC": {
+    "link": "https://github.com/mfkl/awesome-vlc#readme",
+    "stars": 168
+  },
+  "CLI Workshoppers": {
+    "link": "https://github.com/therebelrobot/awesome-workshopper#readme",
+    "stars": 1889
+  },
+  "Learn to Program": {
+    "link": "https://github.com/karlhorky/learn-to-program#readme",
+    "stars": 4149
+  },
+  "Speaking": {
+    "link": "https://github.com/matteofigus/awesome-speaking#readme",
+    "stars": 1599
+  },
+  "Tech Videos": {
+    "link": "https://github.com/lucasviola/awesome-tech-videos#readme",
+    "stars": 789
+  },
+  "Dive into Machine Learning": {
+    "link": "https://github.com/hangtwenty/dive-into-machine-learning#readme",
+    "stars": 11285
+  },
+  "Computer History": {
+    "link": "https://github.com/watson/awesome-computer-history#readme",
+    "stars": 2731
+  },
+  "Programming for Kids": {
+    "link": "https://github.com/HollyAdele/awesome-programming-for-kids#readme",
+    "stars": 1080
+  },
+  "STEAM": {
+    "link": "https://github.com/RahulBirCodes/awesome-steam#readme",
+    "stars": 108
+  },
+  "Educational Games": {
+    "link": "https://github.com/yrgo/awesome-educational-games#readme",
+    "stars": 899
+  },
+  "JavaScript Learning": {
+    "link": "https://github.com/micromata/awesome-javascript-learning#readme",
+    "stars": 5364
+  },
+  "CSS Learning": {
+    "link": "https://github.com/micromata/awesome-css-learning#readme",
+    "stars": 3506
+  },
+  "Product Management": {
+    "link": "https://github.com/dend/awesome-product-management#readme",
+    "stars": 1441
+  },
+  "Roadmaps": {
+    "link": "https://github.com/liuchong/awesome-roadmaps#readme",
+    "stars": 5861
+  },
+  "YouTubers": {
+    "link": "https://github.com/JoseDeFreitas/awesome-youtubers#readme",
+    "stars": 6006
+  },
+  "Hackathon": {
+    "link": "https://github.com/dribdat/awesome-hackathon#readme",
+    "stars": 127
+  },
+  "Certificates": {
+    "link": "https://github.com/PanXProject/awesome-certificates#readme",
+    "stars": 2074
+  },
+  "Application Security": {
+    "link": "https://github.com/paragonie/awesome-appsec#readme",
+    "stars": 6365
+  },
+  "Security": {
+    "link": "https://github.com/sbilly/awesome-security#readme",
+    "stars": 12543
+  },
+  "CTF": {
+    "link": "https://github.com/apsdehal/awesome-ctf#readme",
+    "stars": 9921
+  },
+  "Cyber Security University": {
+    "link": "https://github.com/brootware/awesome-cyber-security-university#readme",
+    "stars": 1774
+  },
+  "Malware Analysis": {
+    "link": "https://github.com/rshipp/awesome-malware-analysis#readme",
+    "stars": 12053
+  },
+  "Android Security": {
+    "link": "https://github.com/ashishb/android-security-awesome#readme",
+    "stars": 8251
+  },
+  "Hacking": {
+    "link": "https://github.com/carpedm20/awesome-hacking#readme",
+    "stars": 13275
+  },
+  "Hacking Spots": {
+    "link": "https://github.com/daviddias/awesome-hacking-locations#readme",
+    "stars": 1065
+  },
+  "Honeypots": {
+    "link": "https://github.com/paralax/awesome-honeypots#readme",
+    "stars": 8721
+  },
+  "Incident Response": {
+    "link": "https://github.com/meirwah/awesome-incident-response#readme",
+    "stars": 7707
+  },
+  "Vehicle Security and Car Hacking": {
+    "link": "https://github.com/jaredthecoder/awesome-vehicle-security#readme",
+    "stars": 3200
+  },
+  "Web Security": {
+    "link": "https://github.com/qazbnm456/awesome-web-security#readme",
+    "stars": 11514
+  },
+  "Lockpicking": {
+    "link": "https://github.com/fabacab/awesome-lockpicking#readme",
+    "stars": 1469
+  },
+  "Cybersecurity Blue Team": {
+    "link": "https://github.com/fabacab/awesome-cybersecurity-blueteam#readme",
+    "stars": 4411
+  },
+  "Fuzzing": {
+    "link": "https://github.com/cpuu/awesome-fuzzing#readme",
+    "stars": 853
+  },
+  "Embedded and IoT Security": {
+    "link": "https://github.com/fkie-cad/awesome-embedded-and-iot-security#readme",
+    "stars": 1847
+  },
+  "GDPR": {
+    "link": "https://github.com/bakke92/awesome-gdpr#readme",
+    "stars": 212
+  },
+  "DevSecOps": {
+    "link": "https://github.com/TaptuIT/awesome-devsecops#readme",
+    "stars": 1426
+  },
+  "Executable Packing": {
+    "link": "https://github.com/dhondta/awesome-executable-packing#readme",
+    "stars": 1224
+  },
+  "Malware Persistence": {
+    "link": "https://github.com/Karneades/awesome-malware-persistence#readme",
+    "stars": 189
+  },
+  "EVM Security": {
+    "link": "https://github.com/kareniel/awesome-evm-security#readme",
+    "stars": 166
+  },
+  "Password Cracking": {
+    "link": "https://github.com/n0kovo/awesome-password-cracking#readme",
+    "stars": 652
+  },
+  "Security Card Games": {
+    "link": "https://github.com/Karneades/awesome-security-card-games#readme",
+    "stars": 112
+  },
+  "Suricata": {
+    "link": "https://github.com/satta/awesome-suricata#readme",
+    "stars": 137
+  },
+  "Prompt Injection": {
+    "link": "https://github.com/FonduAI/awesome-prompt-injection#readme",
+    "stars": 194
+  },
+  "Detection Engineering": {
+    "link": "https://github.com/infosecB/awesome-detection-engineering#readme",
+    "stars": 865
+  },
+  "Annual Security Reports": {
+    "link": "https://github.com/jacobdjwilson/awesome-annual-security-reports#readme",
+    "stars": 357
+  },
+  "Umbraco": {
+    "link": "https://github.com/umbraco-community/awesome-umbraco#readme",
+    "stars": 209
+  },
+  "Refinery CMS": {
+    "link": "https://github.com/refinerycms-contrib/awesome-refinerycms#readme",
+    "stars": 32
+  },
+  "Wagtail": {
+    "link": "https://github.com/springload/awesome-wagtail#readme",
+    "stars": 2038
+  },
+  "Textpattern": {
+    "link": "https://github.com/drmonkeyninja/awesome-textpattern#readme",
+    "stars": 80
+  },
+  "Drupal": {
+    "link": "https://github.com/nirgn975/awesome-drupal#readme",
+    "stars": 91
+  },
+  "Craft CMS": {
+    "link": "https://github.com/craftcms/awesome#readme",
+    "stars": 532
+  },
+  "Sitecore": {
+    "link": "https://github.com/MartinMiles/Awesome-Sitecore#readme",
+    "stars": 73
+  },
+  "Silverstripe CMS": {
+    "link": "https://github.com/wernerkrauss/awesome-silverstripe-cms#readme",
+    "stars": 50
+  },
+  "Directus": {
+    "link": "https://github.com/directus-community/awesome-directus#readme",
+    "stars": 558
+  },
+  "Plone": {
+    "link": "https://github.com/collective/awesome-plone#readme",
+    "stars": 53
+  },
+  "Robotics": {
+    "link": "https://github.com/Kiloreux/awesome-robotics#readme",
+    "stars": 4434
+  },
+  "Internet of Things": {
+    "link": "https://github.com/HQarroum/awesome-iot#readme",
+    "stars": 3311
+  },
+  "Electronics": {
+    "link": "https://github.com/kitspace/awesome-electronics#readme",
+    "stars": 6032
+  },
+  "Bluetooth Beacons": {
+    "link": "https://github.com/rabschi/awesome-beacon#readme",
+    "stars": 904
+  },
+  "Electric Guitar Specifications": {
+    "link": "https://github.com/gitfrage/guitarspecs#readme",
+    "stars": 239
+  },
+  "Plotters": {
+    "link": "https://github.com/beardicus/awesome-plotters#readme",
+    "stars": 1121
+  },
+  "Robotic Tooling": {
+    "link": "https://github.com/protontypes/awesome-robotic-tooling#readme",
+    "stars": 3317
+  },
+  "LIDAR": {
+    "link": "https://github.com/szenergy/awesome-lidar#readme",
+    "stars": 974
+  },
+  "Open Hardware": {
+    "link": "https://github.com/delftopenhardware/awesome-open-hardware#readme",
+    "stars": 468
+  },
+  "ADS-B": {
+    "link": "https://github.com/rickstaa/awesome-adsb#readme",
+    "stars": 119
+  },
+  "Flying FPV": {
+    "link": "https://github.com/Matthias84/awesome-flying-fpv#readme",
+    "stars": 330
+  },
+  "Open Companies": {
+    "link": "https://github.com/opencompany/awesome-open-company#readme",
+    "stars": 1022
+  },
+  "Places to Post Your Startup": {
+    "link": "https://github.com/mmccaff/PlacesToPostYourStartup#readme",
+    "stars": 5999
+  },
+  "OKR Methodology": {
+    "link": "https://github.com/domenicosolazzo/awesome-okr#readme",
+    "stars": 1637
+  },
+  "Leading and Managing": {
+    "link": "https://github.com/LappleApple/awesome-leading-and-managing#readme",
+    "stars": 0
+  },
+  "Indie": {
+    "link": "https://github.com/mezod/awesome-indie#readme",
+    "stars": 9971
+  },
+  "Tools of the Trade": {
+    "link": "https://github.com/cjbarber/ToolsOfTheTrade#readme",
+    "stars": 16603
+  },
+  "Clean Tech": {
+    "link": "https://github.com/nglgzz/awesome-clean-tech#readme",
+    "stars": 427
+  },
+  "Wardley Maps": {
+    "link": "https://github.com/wardley-maps-community/awesome-wardley-maps#readme",
+    "stars": 680
+  },
+  "Social Enterprise": {
+    "link": "https://github.com/RayBB/awesome-social-enterprise#readme",
+    "stars": 99
+  },
+  "Engineering Team Management": {
+    "link": "https://github.com/kdeldycke/awesome-engineering-team-management#readme",
+    "stars": 2020
+  },
+  "Developer-First Products": {
+    "link": "https://github.com/agamm/awesome-developer-first#readme",
+    "stars": 1142
+  },
+  "Billing": {
+    "link": "https://github.com/kdeldycke/awesome-billing#readme",
+    "stars": 951
+  },
+  "Engineering Strategy": {
+    "link": "https://github.com/aleixmorgadas/awesome-engineering-strategy#readme",
+    "stars": 1062
+  },
+  "Slack": {
+    "link": "https://github.com/matiassingers/awesome-slack#readme",
+    "stars": 846
+  },
+  "Remote Jobs": {
+    "link": "https://github.com/lukasz-madon/awesome-remote-job#readme",
+    "stars": 35278
+  },
+  "Productivity": {
+    "link": "https://github.com/jyguyomarch/awesome-productivity#readme",
+    "stars": 2619
+  },
+  "Niche Job Boards": {
+    "link": "https://github.com/tramcar/awesome-job-boards#readme",
+    "stars": 1373
+  },
+  "Programming Interviews": {
+    "link": "https://github.com/DopplerHQ/awesome-interview-questions#readme",
+    "stars": 71853
+  },
+  "Code Review": {
+    "link": "https://github.com/joho/awesome-code-review#readme",
+    "stars": 4410
+  },
+  "Creative Technology": {
+    "link": "https://github.com/j0hnm4r5/awesome-creative-technology#readme",
+    "stars": 454
+  },
+  "Internships": {
+    "link": "https://github.com/lodthe/awesome-internships#readme",
+    "stars": 421
+  },
+  "Software-Defined Networking": {
+    "link": "https://github.com/sdnds-tw/awesome-sdn#readme",
+    "stars": 1483
+  },
+  "PCAPTools": {
+    "link": "https://github.com/caesar0301/awesome-pcaptools#readme",
+    "stars": 3137
+  },
+  "Real-Time Communications": {
+    "link": "https://github.com/rtckit/awesome-rtc#readme",
+    "stars": 367
+  },
+  "SNMP": {
+    "link": "https://github.com/eozer/awesome-snmp#readme",
+    "stars": 126
+  },
+  "Scapy": {
+    "link": "https://github.com/secdev/awesome-scapy#readme",
+    "stars": 252
+  },
+  "Bitcoin": {
+    "link": "https://github.com/igorbarinov/awesome-bitcoin#readme",
+    "stars": 1197
+  },
+  "Ripple": {
+    "link": "https://github.com/vhpoet/awesome-ripple#readme",
+    "stars": 183
+  },
+  "Non-Financial Blockchain": {
+    "link": "https://github.com/machinomy/awesome-non-financial-blockchain#readme",
+    "stars": 629
+  },
+  "Mastodon": {
+    "link": "https://github.com/hyperupcall/awesome-mastodon#readme",
+    "stars": 30
+  },
+  "Ethereum": {
+    "link": "https://github.com/ttumiel/Awesome-Ethereum#readme",
+    "stars": 318
+  },
+  "Blockchain AI": {
+    "link": "https://github.com/steven2358/awesome-blockchain-ai#readme",
+    "stars": 948
+  },
+  "EOSIO": {
+    "link": "https://github.com/DanailMinchev/awesome-eosio#readme",
+    "stars": 76
+  },
+  "Corda": {
+    "link": "https://github.com/chainstack/awesome-corda#readme",
+    "stars": 69
+  },
+  "Waves": {
+    "link": "https://github.com/msmolyakov/awesome-waves#readme",
+    "stars": 81
+  },
+  "Substrate": {
+    "link": "https://github.com/substrate-developer-hub/awesome-substrate#readme",
+    "stars": 758
+  },
+  "Golem": {
+    "link": "https://github.com/golemfactory/awesome-golem#readme",
+    "stars": 205
+  },
+  "Stacks": {
+    "link": "https://github.com/stackshareio/awesome-stacks#readme",
+    "stars": 3498
+  },
+  "Algorand": {
+    "link": "https://github.com/aorumbayev/awesome-algorand#readme",
+    "stars": 193
+  },
+  "ZeroNet": {
+    "link": "https://github.com/zolagonano/awesome-zeronet#readme",
+    "stars": 77
+  },
+  "Cosmos SDK": {
+    "link": "https://github.com/cosmos/awesome-cosmos#readme",
+    "stars": 539
+  },
+  "Tor": {
+    "link": "https://github.com/polycarbohydrate/awesome-tor#readme",
+    "stars": 30
+  },
+  "Biomedical Information Extraction": {
+    "link": "https://github.com/caufieldjh/awesome-bioie#readme",
+    "stars": 351
+  },
+  "Computational Neuroscience": {
+    "link": "https://github.com/eselkin/awesome-computational-neuroscience#readme",
+    "stars": 753
+  },
+  "Diversity": {
+    "link": "https://github.com/folkswhocode/awesome-diversity#readme",
+    "stars": 628
+  },
+  "Digital History": {
+    "link": "https://github.com/maehr/awesome-digital-history#readme",
+    "stars": 232
+  },
+  "Empathy in Engineering": {
+    "link": "https://github.com/KimberlyMunoz/empathy-in-engineering#readme",
+    "stars": 535
+  },
+  "Healthcare": {
+    "link": "https://github.com/kakoni/awesome-healthcare#readme",
+    "stars": 2746
+  },
+  "Humane Technology": {
+    "link": "https://github.com/humanetech-community/awesome-humane-tech#readme",
+    "stars": 3022
+  },
+  "Mental Health": {
+    "link": "https://github.com/dreamingechoes/awesome-mental-health#readme",
+    "stars": 3125
+  },
+  "Neuroscience": {
+    "link": "https://github.com/analyticalmonk/awesome-neuroscience#readme",
+    "stars": 1324
+  },
+  "Digital Humanities": {
+    "link": "https://github.com/dh-tech/awesome-digital-humanities#readme",
+    "stars": 252
+  },
+  "Lucid Dreams": {
+    "link": "https://github.com/IAmCoder/awesome-lucid-dreams#readme",
+    "stars": 53
+  },
+  "Creative Tech Events": {
+    "link": "https://github.com/danvoyce/awesome-creative-tech-events#readme",
+    "stars": 166
+  },
+  "Events in Italy": {
+    "link": "https://github.com/ildoc/awesome-italy-events#readme",
+    "stars": 148
+  },
+  "Events in the Netherlands": {
+    "link": "https://github.com/awkward/awesome-netherlands-events#readme",
+    "stars": 62
+  },
+  "Testing": {
+    "link": "https://github.com/TheJambo/awesome-testing#readme",
+    "stars": 1884
+  },
+  "Visual Regression Testing": {
+    "link": "https://github.com/mojoaxel/awesome-regression-testing#readme",
+    "stars": 2205
+  },
+  "Selenium": {
+    "link": "https://github.com/christian-bromann/awesome-selenium#readme",
+    "stars": 1020
+  },
+  "Appium": {
+    "link": "https://github.com/SrinivasanTarget/awesome-appium#readme",
+    "stars": 436
+  },
+  "TAP": {
+    "link": "https://github.com/sindresorhus/awesome-tap#readme",
+    "stars": 634
+  },
+  "JMeter": {
+    "link": "https://github.com/aliesbelik/awesome-jmeter#readme",
+    "stars": 726
+  },
+  "k6": {
+    "link": "https://github.com/grafana/awesome-k6#readme",
+    "stars": 599
+  },
+  "Playwright": {
+    "link": "https://github.com/mxschmitt/awesome-playwright#readme",
+    "stars": 949
+  },
+  "Quality Assurance Roadmap": {
+    "link": "https://github.com/fityanos/awesome-quality-assurance-roadmap#readme",
+    "stars": 1849
+  },
+  "Gatling": {
+    "link": "https://github.com/aliesbelik/awesome-gatling#readme",
+    "stars": 71
+  },
+  "Scientific Writing": {
+    "link": "https://github.com/writing-resources/awesome-scientific-writing#readme",
+    "stars": 774
+  },
+  "JSON": {
+    "link": "https://github.com/burningtree/awesome-json#readme",
+    "stars": 1410
+  },
+  "CSV": {
+    "link": "https://github.com/secretGeek/awesomeCSV#readme",
+    "stars": 750
+  },
+  "Discounts for Student Developers": {
+    "link": "https://github.com/AchoArnold/discount-for-student-dev#readme",
+    "stars": 2923
+  },
+  "Radio": {
+    "link": "https://github.com/kyleterry/awesome-radio#readme",
+    "stars": 257
+  },
+  "Awesome": {
+    "link": "https://github.com/sindresorhus/awesome#readme",
+    "stars": 336578
+  },
+  "Analytics": {
+    "link": "https://github.com/0xnr/awesome-analytics#readme",
+    "stars": 3949
+  },
+  "REST": {
+    "link": "https://github.com/marmelab/awesome-rest#readme",
+    "stars": 3658
+  },
+  "Continuous Integration and Continuous Delivery": {
+    "link": "https://github.com/cicdops/awesome-ciandcd#readme",
+    "stars": 1885
+  },
+  "Services Engineering": {
+    "link": "https://github.com/mmcgrana/services-engineering#readme",
+    "stars": 3622
+  },
+  "Free for Developers": {
+    "link": "https://github.com/ripienaar/free-for-dev#readme",
+    "stars": 91099
+  },
+  "Answers": {
+    "link": "https://github.com/cyberglot/awesome-answers#readme",
+    "stars": 767
+  },
+  "Sketch": {
+    "link": "https://github.com/diessica/awesome-sketch#readme",
+    "stars": 740
+  },
+  "Boilerplate Projects": {
+    "link": "https://github.com/melvin0008/awesome-projects-boilerplates#readme",
+    "stars": 1291
+  },
+  "Readme": {
+    "link": "https://github.com/matiassingers/awesome-readme#readme",
+    "stars": 18304
+  },
+  "GitHub Wiki": {
+    "link": "https://github.com/MyHoneyBadger/awesome-github-wiki#readme",
+    "stars": 285
+  },
+  "Design and Development Guides": {
+    "link": "https://github.com/NARKOZ/guides#readme",
+    "stars": 2230
+  },
+  "Software Engineering Blogs": {
+    "link": "https://github.com/kilimchoi/engineering-blogs#readme",
+    "stars": 31851
+  },
+  "Self Hosted": {
+    "link": "https://github.com/awesome-selfhosted/awesome-selfhosted#readme",
+    "stars": 206247
+  },
+  "FOSS Production Apps": {
+    "link": "https://github.com/DataDaoDe/awesome-foss-apps#readme",
+    "stars": 319
+  },
+  "Gulp": {
+    "link": "https://github.com/alferov/awesome-gulp#readme",
+    "stars": 624
+  },
+  "AMA": {
+    "link": "https://github.com/sindresorhus/amas#readme",
+    "stars": 1424
+  },
+  "Open Source Photography": {
+    "link": "https://github.com/ibaaj/awesome-OpenSourcePhotography#readme",
+    "stars": 555
+  },
+  "OpenGL": {
+    "link": "https://github.com/eug/awesome-opengl#readme",
+    "stars": 2180
+  },
+  "GraphQL": {
+    "link": "https://github.com/chentsulin/awesome-graphql#readme",
+    "stars": 14616
+  },
+  "Urban & Regional Planning": {
+    "link": "https://github.com/APA-Technology-Division/urban-and-regional-planning-resources#readme",
+    "stars": 272
+  },
+  "Transit": {
+    "link": "https://github.com/CUTR-at-USF/awesome-transit#readme",
+    "stars": 1398
+  },
+  "Research Tools": {
+    "link": "https://github.com/emptymalei/awesome-research#readme",
+    "stars": 2116
+  },
+  "Data Visualization": {
+    "link": "https://github.com/javierluraschi/awesome-dataviz#readme",
+    "stars": 3829
+  },
+  "Microservices": {
+    "link": "https://github.com/mfornos/awesome-microservices#readme",
+    "stars": 13391
+  },
+  "Unicode": {
+    "link": "https://github.com/jagracey/Awesome-Unicode#readme",
+    "stars": 917
+  },
+  "Beginner-Friendly Projects": {
+    "link": "https://github.com/MunGell/awesome-for-beginners#readme",
+    "stars": 69752
+  },
+  "Katas": {
+    "link": "https://github.com/gamontal/awesome-katas#readme",
+    "stars": 2843
+  },
+  "Tools for Activism": {
+    "link": "https://github.com/drewrwilson/toolsforactivism#readme",
+    "stars": 973
+  },
+  "Citizen Science": {
+    "link": "https://github.com/dylanrees/citizen-science#readme",
+    "stars": 250
+  },
+  "MQTT": {
+    "link": "https://github.com/hobbyquaker/awesome-mqtt#readme",
+    "stars": 2166
+  },
+  "For Girls": {
+    "link": "https://github.com/cristianoliveira/awesome4girls#readme",
+    "stars": 577
+  },
+  "Vorpal": {
+    "link": "https://github.com/vorpaljs/awesome-vorpal#readme",
+    "stars": 143
+  },
+  "Vulkan": {
+    "link": "https://github.com/vinjn/awesome-vulkan#readme",
+    "stars": 3345
+  },
+  "LaTeX": {
+    "link": "https://github.com/egeerardyn/awesome-LaTeX#readme",
+    "stars": 1418
+  },
+  "Economics": {
+    "link": "https://github.com/antontarasenko/awesome-economics#readme",
+    "stars": 1337
+  },
+  "Funny Markov Chains": {
+    "link": "https://github.com/sublimino/awesome-funny-markov#readme",
+    "stars": 211
+  },
+  "Bioinformatics": {
+    "link": "https://github.com/danielecook/Awesome-Bioinformatics#readme",
+    "stars": 3224
+  },
+  "Cheminformatics": {
+    "link": "https://github.com/hsiaoyi0504/awesome-cheminformatics#readme",
+    "stars": 706
+  },
+  "Colorful": {
+    "link": "https://github.com/Siddharth11/Colorful#readme",
+    "stars": 1121
+  },
+  "Steam": {
+    "link": "https://github.com/scholtzm/awesome-steam#readme",
+    "stars": 504
+  },
+  "Bots": {
+    "link": "https://github.com/hackerkid/bots#readme",
+    "stars": 1379
+  },
+  "Site Reliability Engineering": {
+    "link": "https://github.com/dastergon/awesome-sre#readme",
+    "stars": 12031
+  },
+  "DTrace": {
+    "link": "https://github.com/xen0l/awesome-dtrace#readme",
+    "stars": 153
+  },
+  "Userscripts": {
+    "link": "https://github.com/bvolpato/awesome-userscripts#readme",
+    "stars": 1972
+  },
+  "Pokémon": {
+    "link": "https://github.com/tobiasbueschel/awesome-pokemon#readme",
+    "stars": 607
+  },
+  "ChatOps": {
+    "link": "https://github.com/exAspArk/awesome-chatops#readme",
+    "stars": 924
+  },
+  "Falsehood": {
+    "link": "https://github.com/kdeldycke/awesome-falsehood#readme",
+    "stars": 24267
+  },
+  "Domain-Driven Design": {
+    "link": "https://github.com/heynickc/awesome-ddd#readme",
+    "stars": 11328
+  },
+  "Quantified Self": {
+    "link": "https://github.com/woop/awesome-quantified-self#readme",
+    "stars": 2362
+  },
+  "SaltStack": {
+    "link": "https://github.com/hbokh/awesome-saltstack#readme",
+    "stars": 524
+  },
+  "Web Design": {
+    "link": "https://github.com/nicolesaidy/awesome-web-design#readme",
+    "stars": 2451
+  },
+  "Creative Coding": {
+    "link": "https://github.com/terkelg/awesome-creative-coding#readme",
+    "stars": 13029
+  },
+  "No-Login Web Apps": {
+    "link": "https://github.com/aviaryan/awesome-no-login-web-apps#readme",
+    "stars": 2666
+  },
+  "Free Software": {
+    "link": "https://github.com/johnjago/awesome-free-software#readme",
+    "stars": 1775
+  },
+  "Framer": {
+    "link": "https://github.com/podo/awesome-framer#readme",
+    "stars": 580
+  },
+  "Markdown": {
+    "link": "https://github.com/BubuAnabelas/awesome-markdown#readme",
+    "stars": 810
+  },
+  "Dev Fun": {
+    "link": "https://github.com/mislavcimpersak/awesome-dev-fun#readme",
+    "stars": 610
+  },
+  "Magento 2": {
+    "link": "https://github.com/DavidLambauer/awesome-magento2#readme",
+    "stars": 1134
+  },
+  "TikZ": {
+    "link": "https://github.com/xiaohanyu/awesome-tikz#readme",
+    "stars": 1530
+  },
+  "Ad-Free": {
+    "link": "https://github.com/johnjago/awesome-ad-free#readme",
+    "stars": 436
+  },
+  "Prometheus": {
+    "link": "https://github.com/roaldnefs/awesome-prometheus#readme",
+    "stars": 1697
+  },
+  "Homematic": {
+    "link": "https://github.com/homematic-community/awesome-homematic#readme",
+    "stars": 195
+  },
+  "Ledger": {
+    "link": "https://github.com/sfischer13/awesome-ledger#readme",
+    "stars": 148
+  },
+  "Web Monetization": {
+    "link": "https://github.com/thomasbnt/awesome-web-monetization#readme",
+    "stars": 309
+  },
+  "Uncopyright": {
+    "link": "https://github.com/johnjago/awesome-uncopyright#readme",
+    "stars": 536
+  },
+  "Crypto Currency Tools & Algorithms": {
+    "link": "https://github.com/Zheaoli/awesome-coins#readme",
+    "stars": 3899
+  },
+  "Open Source Supporters": {
+    "link": "https://github.com/zachflower/awesome-open-source-supporters#readme",
+    "stars": 628
+  },
+  "Design Principles": {
+    "link": "https://github.com/robinstickel/awesome-design-principles#readme",
+    "stars": 652
+  },
+  "Theravada": {
+    "link": "https://github.com/johnjago/awesome-theravada#readme",
+    "stars": 152
+  },
+  "inspectIT": {
+    "link": "https://github.com/inspectit-labs/awesome-inspectit#readme",
+    "stars": 24
+  },
+  "Open Source Maintainers": {
+    "link": "https://github.com/nayafia/awesome-maintainers#readme",
+    "stars": 1129
+  },
+  "Calculators": {
+    "link": "https://github.com/xxczaki/awesome-calculators#readme",
+    "stars": 187
+  },
+  "Captcha": {
+    "link": "https://github.com/ZYSzys/awesome-captcha#readme",
+    "stars": 1232
+  },
+  "Jupyter": {
+    "link": "https://github.com/markusschanta/awesome-jupyter#readme",
+    "stars": 4074
+  },
+  "FIRST Robotics Competition": {
+    "link": "https://github.com/andrewda/awesome-frc#readme",
+    "stars": 110
+  },
+  "Speakers": {
+    "link": "https://github.com/karlhorky/awesome-speakers#readme",
+    "stars": 761
+  },
+  "Board Games": {
+    "link": "https://github.com/edm00se/awesome-board-games#readme",
+    "stars": 312
+  },
+  "Software Patreons": {
+    "link": "https://github.com/uraimo/awesome-software-patreons#readme",
+    "stars": 494
+  },
+  "Parasite": {
+    "link": "https://github.com/ecohealthalliance/awesome-parasite#readme",
+    "stars": 38
+  },
+  "Food": {
+    "link": "https://github.com/jzarca01/awesome-food#readme",
+    "stars": 187
+  },
+  "Bitcoin Payment Processors": {
+    "link": "https://github.com/alexk111/awesome-bitcoin-payment-processors#readme",
+    "stars": 437
+  },
+  "Scientific Computing": {
+    "link": "https://github.com/nschloe/awesome-scientific-computing#readme",
+    "stars": 1343
+  },
+  "Amazon Sellers": {
+    "link": "https://github.com/ScaleLeap/awesome-amazon-seller#readme",
+    "stars": 320
+  },
+  "Agriculture": {
+    "link": "https://github.com/brycejohnston/awesome-agriculture#readme",
+    "stars": 1341
+  },
+  "Product Design": {
+    "link": "https://github.com/ttt30ga/awesome-product-design#readme",
+    "stars": 2320
+  },
+  "Prisma": {
+    "link": "https://github.com/catalinmiron/awesome-prisma#readme",
+    "stars": 626
+  },
+  "Software Architecture": {
+    "link": "https://github.com/simskij/awesome-software-architecture#readme",
+    "stars": 2373
+  },
+  "Connectivity Data and Reports": {
+    "link": "https://github.com/stevesong/awesome-connectivity-info#readme",
+    "stars": 129
+  },
+  "Cytodata": {
+    "link": "https://github.com/cytodata/awesome-cytodata#readme",
+    "stars": 74
+  },
+  "IRC": {
+    "link": "https://github.com/davisonio/awesome-irc#readme",
+    "stars": 944
+  },
+  "Advertising": {
+    "link": "https://github.com/cenoura/awesome-ads#readme",
+    "stars": 126
+  },
+  "Earth": {
+    "link": "https://github.com/philsturgeon/awesome-earth#readme",
+    "stars": 1352
+  },
+  "Naming": {
+    "link": "https://github.com/gruhn/awesome-naming#readme",
+    "stars": 1300
+  },
+  "Web Archiving": {
+    "link": "https://github.com/iipc/awesome-web-archiving#readme",
+    "stars": 2072
+  },
+  "WP-CLI": {
+    "link": "https://github.com/schlessera/awesome-wp-cli#readme",
+    "stars": 196
+  },
+  "Credit Modeling": {
+    "link": "https://github.com/mourarthur/awesome-credit-modeling#readme",
+    "stars": 126
+  },
+  "Ansible": {
+    "link": "https://github.com/ansible-community/awesome-ansible#readme",
+    "stars": 1423
+  },
+  "Biological Visualizations": {
+    "link": "https://github.com/keller-mark/awesome-biological-visualizations#readme",
+    "stars": 175
+  },
+  "QR Code": {
+    "link": "https://github.com/make-github-pseudonymous-again/awesome-qr-code#readme",
+    "stars": 104
+  },
+  "Veganism": {
+    "link": "https://github.com/sdassow/awesome-veganism#readme",
+    "stars": 68
+  },
+  "Translations": {
+    "link": "https://github.com/mbiesiad/awesome-translations#readme",
+    "stars": 150
+  },
+  "Scriptable": {
+    "link": "https://github.com/dersvenhesse/awesome-scriptable#readme",
+    "stars": 1225
+  },
+  "WebXR": {
+    "link": "https://github.com/msub2/awesome-webxr#readme",
+    "stars": 221
+  },
+  "Computational Geometry": {
+    "link": "https://github.com/atkirtland/awesome-computational-geometry#readme",
+    "stars": 71
+  },
+  "OpenStreetMap": {
+    "link": "https://github.com/osmlab/awesome-openstreetmap#readme",
+    "stars": 680
+  },
+  "Computational Biology": {
+    "link": "https://github.com/inoue0426/awesome-computational-biology#readme",
+    "stars": 73
+  },
+  "Read the Docs": {
+    "link": "https://github.com/readthedocs-examples/awesome-read-the-docs#readme",
+    "stars": 149
+  },
+  "Quarto": {
+    "link": "https://github.com/mcanouil/awesome-quarto#readme",
+    "stars": 1764
+  },
+  "Biological Image Analysis": {
+    "link": "https://github.com/hallvaaw/awesome-biological-image-analysis#readme",
+    "stars": 125
+  },
+  "ChatGPT": {
+    "link": "https://github.com/sindresorhus/awesome-chatgpt#readme",
+    "stars": 5200
+  },
+  "Whisper": {
+    "link": "https://github.com/sindresorhus/awesome-whisper#readme",
+    "stars": 1292
+  },
+  "Stock Trading": {
+    "link": "https://github.com/shi-rudo/awesome-stock-trading#readme",
+    "stars": 141
+  },
+  "Steam Deck": {
+    "link": "https://github.com/airscripts/awesome-steam-deck#readme",
+    "stars": 385
+  },
+  "Astrophotography": {
+    "link": "https://github.com/lunohodov/awesome-astrophotography#readme",
+    "stars": 77
+  },
+  "HPC": {
+    "link": "https://github.com/dstdev/awesome-hpc#readme",
+    "stars": 114
+  },
+  "Geocaching": {
+    "link": "https://github.com/FoxFil/awesome-geocaching#readme",
+    "stars": 16
+  },
+  "Regex": {
+    "link": "https://github.com/slevithan/awesome-regex#readme",
+    "stars": 258
+  },
+  "Event-Driven Architecture": {
+    "link": "https://github.com/lutzh/awesome-event-driven-architecture#readme",
+    "stars": 391
+  },
+  "All Awesome Lists": {
+    "link": "https://github.com/topics/awesome",
+    "stars": 0
+  },
+  "StumbleUponAwesome": {
+    "link": "https://github.com/basharovV/StumbleUponAwesome",
+    "stars": 380
+  },
+  "Awesome CLI": {
+    "link": "https://github.com/umutphp/awesome-cli",
+    "stars": 526
+  }
+}

@@ -24,10 +24,27 @@ if (window.location.hash) {
     // Wrap entire script in an Immediately Invoked Function Expression (IIFE)
     // This prevents global variable conflicts
 
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'light-theme';
+    body.classList.add(savedTheme);
+    themeToggle.checked = savedTheme === 'dark-theme';
+
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            body.classList.replace('light-theme', 'dark-theme');
+            localStorage.setItem('theme', 'dark-theme');
+        } else {
+            body.classList.replace('dark-theme', 'light-theme');
+            localStorage.setItem('theme', 'light-theme');
+        }
+    });
+
     // Check if theme toggle already exists to prevent redeclaration
     const existingThemeToggle = document.getElementById('themeToggle');
     if (!existingThemeToggle) {
-        const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
 
         // Remove any existing theme classes
@@ -76,18 +93,40 @@ if (window.location.hash) {
     const urlParams = new URLSearchParams(window.location.search);
     const categoryName = urlParams.get('name');
 
+    if (!categoryName) {
+        console.error('No category name provided in URL');
+        document.getElementById('category-items-grid').innerHTML = '<p class="error-message">No category specified</p>';
+        return;
+    }
+
     // Set category title
     const categoryTitleElement = document.getElementById('category-title');
     if (categoryTitleElement) {
         categoryTitleElement.textContent = categoryName;
     }
 
+    async function loadStarCounts() {
+        const response = await fetch('starcount.json');
+        const starCounts = await response.json();
+        return starCounts;
+    }
+
     // Fetch and render category items
     fetch('parsed_content.json')
         .then(response => response.json())
-        .then(data => {
+        .then(async data => {
             const categoryItems = data[categoryName];
+            
+            if (!categoryItems || !Array.isArray(categoryItems)) {
+                console.error('Category not found or invalid:', categoryName);
+                document.getElementById('category-items-grid').innerHTML = '<p class="error-message">Category not found</p>';
+                return;
+            }
+
             const categoryContent = document.getElementById('category-items-grid');
+
+            // Clear existing content to prevent duplication
+            categoryContent.innerHTML = '';
 
             // Identify the target item based on the hash
             const targetId = window.location.hash.substring(1); // e.g., "item-devsecops"
@@ -101,7 +140,9 @@ if (window.location.hash) {
                 categoryItems.unshift(targetItem); // Add it to the beginning of the array
             }
 
-            // Now render the items
+            const starCounts = await loadStarCounts();
+
+            // Render the items
             categoryItems.forEach(item => {
                 const itemCard = document.createElement('div');
                 itemCard.className = 'category-item-card';
@@ -111,6 +152,20 @@ if (window.location.hash) {
                 const itemTitle = document.createElement('h3');
                 itemTitle.innerHTML = `<a href="${item.link}" target="_blank" rel="nofollow">${item.name}</a>`;
                 itemCard.appendChild(itemTitle);
+
+                // Display star count
+                const starCount = document.createElement('div');
+                starCount.className = 'star-count';
+                starCount.textContent = `⭐ ${starCounts[item.name]?.stars || 0}`;
+                starCount.style.position = 'absolute';
+                starCount.style.top = '10px';
+                starCount.style.right = '10px';
+                starCount.style.background = 'rgba(255, 255, 255, 0.8)';
+                starCount.style.borderRadius = '5px';
+                starCount.style.padding = '5px';
+                starCount.style.fontSize = '12px';
+                starCount.style.color = '#000';
+                itemCard.appendChild(starCount);
 
                 if (item.description) {
                     const description = document.createElement('p');

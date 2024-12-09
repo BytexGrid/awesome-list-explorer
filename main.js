@@ -17,49 +17,12 @@ let allData = null;
 
 // Theme Toggle functionality
 function initializeTheme() {
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-
-    // Remove any existing theme classes
-    body.classList.remove('light-theme', 'dark-theme');
-
-    // Check system preference
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const themeToggle = document.getElementById('theme-toggle');
+    if (!themeToggle) return; // Guard clause if element not found
     
-    // Get saved theme
-    const savedTheme = localStorage.getItem('theme');
-    
-    // Use saved theme if exists, otherwise use system preference
-    let currentTheme;
-    if (savedTheme) {
-        currentTheme = savedTheme;
-    } else {
-        currentTheme = prefersDark ? 'dark-theme' : 'light-theme';
-    }
-    
-    // Apply theme
-    body.classList.add(currentTheme);
-    themeToggle.checked = currentTheme === 'dark-theme';
-
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            const newTheme = e.matches ? 'dark-theme' : 'light-theme';
-            body.classList.remove('light-theme', 'dark-theme');
-            body.classList.add(newTheme);
-            themeToggle.checked = e.matches;
-        }
-    });
-
-    themeToggle.addEventListener('change', () => {
-        if (themeToggle.checked) {
-            body.classList.replace('light-theme', 'dark-theme');
-            localStorage.setItem('theme', 'dark-theme');
-        } else {
-            body.classList.replace('dark-theme', 'light-theme');
-            localStorage.setItem('theme', 'light-theme');
-        }
-    });
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.classList.toggle('dark-theme', savedTheme === 'dark');
+    themeToggle.checked = savedTheme === 'dark';
 }
 
 // Search functionality
@@ -70,83 +33,43 @@ function highlightText(text, query) {
 }
 
 function performSearch(query) {
-    if (!allData) return [];
-
-    query = query.toLowerCase().trim();
-    const searchResults = [];
-    const uniqueResults = new Set(); // Track unique results
-
-    // Priority 1: Category Name Matches
-    allData.Contents.forEach(category => {
-        if (category.name.toLowerCase().includes(query)) {
-            const resultKey = `category:${category.name}`;
-            if (!uniqueResults.has(resultKey)) {
-                searchResults.push({
-                    name: category.name,
-                    description: `Category with ${allData[category.name].length} items`,
-                    link: `category.html?name=${encodeURIComponent(category.name)}`,
-                    score: 4,
-                    matchType: 'Category Name Match',
-                    isCategory: true
-                });
-                uniqueResults.add(resultKey);
-            }
+    if (!window.categoryData || !query) return [];
+    
+    query = query.toLowerCase();
+    const results = [];
+    
+    // Search in Contents array
+    window.categoryData.Contents.forEach(category => {
+        if (category.name.toLowerCase().includes(query) ||
+            (category.description && category.description.toLowerCase().includes(query))) {
+            results.push({
+                type: 'category',
+                name: category.name,
+                description: category.description || `Explore ${category.name} resources`,
+                link: `category.html?name=${encodeURIComponent(category.name)}`
+            });
         }
     });
-
-    // Priority 2: Category-level Item Name Matches
-    allData.Contents.forEach(category => {
-        const categoryItems = allData[category.name];
-
-        categoryItems.forEach(item => {
-            let score = 0;
-            let matchType = '';
-
-            // Name match (high priority)
-            if (item.name.toLowerCase().includes(query)) {
-                score = 3;
-                matchType = 'Item Name Match';
-            }
-            // Sub-items match (medium priority)
-            else if (item.sub_items && item.sub_items.some(subItem => 
-                subItem.name.toLowerCase().includes(query)
-            )) {
-                score = 2;
-                matchType = 'Sub-Item Match';
-            }
-            // Description match (lowest priority)
-            else if (item.description && item.description.toLowerCase().includes(query)) {
-                score = 1;
-                matchType = 'Description Match';
-            }
-
-            if (score > 0) {
-                const resultKey = `item:${item.name}:${category.name}`;
-                if (!uniqueResults.has(resultKey)) {
-                    searchResults.push({
-                        ...item,
-                        category: category.name,
-                        score,
-                        matchType,
-                        link: `category.html?name=${encodeURIComponent(category.name)}`,
-                        isCategory: false
+    
+    // Search in individual category resources
+    Object.entries(window.categoryData).forEach(([categoryName, items]) => {
+        if (categoryName !== 'Contents' && Array.isArray(items)) {
+            items.forEach(item => {
+                if (item.name.toLowerCase().includes(query) ||
+                    (item.description && item.description.toLowerCase().includes(query))) {
+                    results.push({
+                        type: 'resource',
+                        name: item.name,
+                        description: item.description || '',
+                        category: categoryName,
+                        link: `category.html?name=${encodeURIComponent(categoryName)}#item-${item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
                     });
-                    uniqueResults.add(resultKey);
                 }
-            }
-        });
-    });
-
-    // Sort results by score (descending)
-    return searchResults.sort((a, b) => {
-        // First, sort by score
-        if (b.score !== a.score) {
-            return b.score - a.score;
+            });
         }
-        
-        // If scores are equal, prioritize categories
-        return (b.isCategory ? 1 : 0) - (a.isCategory ? 1 : 0);
     });
+    
+    return results;
 }
 
 function displaySearchResults(results, query) {
@@ -162,22 +85,21 @@ function displaySearchResults(results, query) {
     }
 
     searchResultsContainer.innerHTML = results.map(result => `
-        <div class="search-result-card ${result.isCategory ? 'category-result' : ''} ${result.category ? `category-${result.category.toLowerCase().replace(' ', '-')}` : ''}">
-            <a href="${result.link}" target="_blank" class="search-result-title">
+        <div class="search-result-card ${result.type === 'category' ? 'category-result' : ''}">
+            <a href="${result.link || `category.html?name=${encodeURIComponent(result.name)}`}" target="_blank" class="search-result-title">
                 ${highlightText(result.name, query)}
-                ${result.isCategory ? `
+                ${result.type === 'category' ? `
                     <span class="category-badge">
                         🗂️ Category
-                        <span class="item-count">${result.description.replace('Category with ', '')}</span>
                     </span>
                 ` : ''}
             </a>
-            ${!result.isCategory ? `
+            ${result.type !== 'category' ? `
                 <p class="search-result-description">
-                    ${highlightText(result.description || 'No description', query)}
+                    ${highlightText(result.description, query)}
                 </p>
                 <div class="search-result-category">
-                    Category: ${result.category} (${result.matchType})
+                    Category: ${result.category}
                 </div>
             ` : ''}
         </div>
@@ -203,56 +125,144 @@ function clearSearch() {
 
 // Initialize event listeners
 function initializeEventListeners() {
-    document.getElementById('global-search').addEventListener('input', function() {
+    const searchInput = document.getElementById('global-search');
+    searchInput.addEventListener('input', function() {
         const query = this.value;
         const results = performSearch(query);
         displaySearchResults(results, query);
+
+        // Check if the input is empty
+        if (query === '') {
+            clearSearch(); // Trigger cancel search
+        }
     });
 
     document.getElementById('clear-search').addEventListener('click', clearSearch);
 }
 
-// Load and render categories
-function loadAndRenderCategories() {
-    fetch('parsed_content.json')
-        .then(response => response.json())
-        .then(data => {
-            allData = data;
-            const categoriesGrid = document.getElementById('categories-grid');
-            const renderedCategories = new Set(); // Track rendered categories
+import { followManager } from './js/follow-manager.js';
 
-            data.Contents.forEach(category => {
-                if (!renderedCategories.has(category.name)) {
-                    const categoryCard = document.createElement('a');
-                    categoryCard.href = `category.html?name=${encodeURIComponent(category.name)}`;
-                    categoryCard.className = 'category-card';
+// Initialize FollowManager
+followManager.initialize();
 
-                    const categoryName = document.createElement('h3');
-                    categoryName.textContent = category.name;
-                    categoryCard.appendChild(categoryName);
+// Example of appending follow button to a category card
+function appendFollowButton(categoryCard, categoryName) {
+    const followButton = document.createElement('button');
+    followButton.className = 'follow-button';
+    followButton.innerHTML = `
+        <div class="hashtag-icon">#<span class="follow-count">0</span></div>
+    `;
 
-                    const itemCount = document.createElement('div');
-                    itemCount.className = 'item-count';
-                    const categoryItems = data[category.name];
-                    itemCount.textContent = `${categoryItems.length} Items`;
-                    categoryCard.appendChild(itemCount);
+    followButton.addEventListener('click', async (e) => {
+        e.preventDefault();
+        await followManager.toggleFollow(categoryName);
+    });
 
-                    const iconSpan = document.createElement('span');
-                    iconSpan.className = 'icon';
-                    iconSpan.textContent = categoryIcons[category.name] || '📁';
-                    categoryCard.appendChild(iconSpan);
-
-                    categoriesGrid.appendChild(categoryCard);
-                    renderedCategories.add(category.name);
-                }
-            });
-        })
-        .catch(error => console.error('Error loading JSON:', error));
+    categoryCard.appendChild(followButton);
 }
 
-// Initialize everything when the DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    initializeTheme();
-    initializeEventListeners();
-    loadAndRenderCategories();
-});
+// Only run this code if we're on the home page (index.html)
+if (!window.location.pathname.includes('category.html')) {
+    async function loadAndRenderCategories() {
+        try {
+            const response = await fetch('parsed_content.json');
+            const data = await response.json();
+            
+            const categoriesGrid = document.getElementById('categories-grid');
+            categoriesGrid.innerHTML = '';
+            
+            data.Contents.forEach(category => {
+                const categoryCard = document.createElement('div');
+                categoryCard.className = 'category-card';
+                categoryCard.setAttribute('data-category', category.name);
+                
+                // Create follow button
+                const followButton = document.createElement('button');
+                followButton.className = 'follow-button';
+                followButton.innerHTML = `
+                    <div class="hashtag-icon">#<span class="follow-count">0</span></div>
+                `;
+                
+                followButton.addEventListener('click', async (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    await followManager.toggleFollow(category.name);
+                });
+                
+                categoryCard.appendChild(followButton);
+                
+                // Create bookmark button
+                const bookmarkButton = document.createElement('button');
+                bookmarkButton.className = 'bookmark-button';
+                const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+                const isBookmarked = bookmarks.includes(category.name);
+                bookmarkButton.innerHTML = isBookmarked ?
+                    `<img class="bookmark-icon" src="media/bookmark-filled-svgrepo-com.svg" alt="Bookmarked">` :
+                    `<img class="bookmark-icon" src="media/bookmark-svgrepo-com (1).svg" alt="Unbookmarked">`;
+                bookmarkButton.addEventListener('click', () => {
+                    toggleBookmark(category.name);
+                });
+                categoryCard.appendChild(bookmarkButton);
+
+                // Create category link wrapper
+                const categoryLink = document.createElement('a');
+                categoryLink.href = `category.html?name=${encodeURIComponent(category.name)}`;
+                categoryLink.style.textDecoration = 'none';
+                categoryLink.style.color = 'inherit';
+                
+                const title = document.createElement('h3');
+                title.textContent = category.name;
+                categoryLink.appendChild(title);
+                
+                const description = document.createElement('p');
+                description.className = 'description';
+                description.textContent = category.description || '';
+                categoryLink.appendChild(description);
+                
+                // Add resource count in a pill container
+                const resourceCount = data[category.name] ? data[category.name].length : 0;
+                const resourceCountPill = document.createElement('div');
+                resourceCountPill.className = 'resource-count';
+                resourceCountPill.textContent = `${resourceCount} Resources`;
+                categoryLink.appendChild(resourceCountPill);
+                
+                categoryCard.appendChild(categoryLink);
+                
+                // Check if category is bookmarked
+                if (bookmarks.includes(category.name)) {
+                    categoriesGrid.prepend(categoryCard);
+                } else {
+                    categoriesGrid.appendChild(categoryCard);
+                }
+            });
+            
+            // Store data globally for search functionality
+            window.categoryData = data;
+            
+            // Initialize follow manager after rendering categories
+            await followManager.initialize();
+        } catch (error) {
+            console.error('Error loading categories:', error);
+        }
+    }
+
+    // Toggle bookmark status
+    function toggleBookmark(categoryName) {
+        const bookmarks = JSON.parse(localStorage.getItem('bookmarks')) || [];
+        const index = bookmarks.indexOf(categoryName);
+        if (index > -1) {
+            bookmarks.splice(index, 1);
+        } else {
+            bookmarks.push(categoryName);
+        }
+        localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+        loadAndRenderCategories();
+    }
+
+    // Initialize everything when the DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        initializeTheme();
+        initializeEventListeners();
+        loadAndRenderCategories();
+    });
+}
