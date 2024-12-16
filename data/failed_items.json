@@ -1,0 +1,82 @@
+[
+  {
+    "category": "Platforms",
+    "name": "macOS",
+    "link": ""
+  },
+  {
+    "category": "Back-End Development",
+    "name": "Kubernetes",
+    "link": "https://github.com/ramitsurana/awesome-kubernetes#readme"
+  },
+  {
+    "category": "Computer Science",
+    "name": "Speech and Natural Language Processing",
+    "link": "https://github.com/edobashira/speech-language-processing#readme"
+  },
+  {
+    "category": "Big Data",
+    "name": "Big Data",
+    "link": "https://github.com/0xnr/awesome-bigdata#readme"
+  },
+  {
+    "category": "Big Data",
+    "name": "Public Datasets",
+    "link": "https://github.com/awesomedata/awesome-public-datasets#readme"
+  },
+  {
+    "category": "Editors",
+    "name": "Emacs",
+    "link": "https://github.com/emacs-tw/awesome-emacs#readme"
+  },
+  {
+    "category": "Databases",
+    "name": "SQLAlchemy",
+    "link": "https://github.com/dahlia/awesome-sqlalchemy#readme"
+  },
+  {
+    "category": "Content Management Systems",
+    "name": "Textpattern",
+    "link": "https://github.com/drmonkeyninja/awesome-textpattern#readme"
+  },
+  {
+    "category": "Business",
+    "name": "Leading and Managing",
+    "link": "https://github.com/LappleApple/awesome-leading-and-managing#readme"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Analytics",
+    "link": "https://github.com/0xnr/awesome-analytics#readme"
+  },
+  {
+    "category": "Miscellaneous",
+    "name": "Quantified Self",
+    "link": "https://github.com/woop/awesome-quantified-self#readme"
+  },
+  {
+    "category": "Related",
+    "name": "All Awesome Lists",
+    "link": "https://github.com/topics/awesome"
+  },
+  {
+    "category": "Related",
+    "name": "Awesome Search",
+    "link": "https://awesomelists.top"
+  },
+  {
+    "category": "Related",
+    "name": "Awesome Viewer",
+    "link": "https://awesome.digitalbunker.dev"
+  },
+  {
+    "category": "Related",
+    "name": "Track Awesome List",
+    "link": "https://www.trackawesomelist.com"
+  },
+  {
+    "category": "Related",
+    "name": "[Open Source Heroes",
+    "link": ""
+  }
+]
