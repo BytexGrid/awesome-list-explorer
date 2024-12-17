@@ -9,6 +9,9 @@ on:
     - cron: '0 0 * * 0'  # Run weekly on Sunday at midnight
   workflow_dispatch:  # Allow manual triggers
 
+permissions:
+  contents: write  # This is needed to push changes
+
 jobs:
   generate-sitemap:
     runs-on: ubuntu-latest
@@ -45,4 +48,4 @@ jobs:
         run: |
           set -e
           git add sitemap.xml
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update sitemap.xml" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update sitemap.xml [$(date +'%Y-%m-%d')]" && git push)
