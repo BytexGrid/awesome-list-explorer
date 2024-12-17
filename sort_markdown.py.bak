@@ -70,8 +70,8 @@ def parse_markdown(content):
 
     return data
 
-# Read the README.md file
-with open('readme.md', 'r', encoding='utf-8') as file:
+# Read the awesome-list-content.md file
+with open('awesome-list-content.md', 'r', encoding='utf-8') as file:
     markdown_content = file.read()
 
 # Parse the markdown content

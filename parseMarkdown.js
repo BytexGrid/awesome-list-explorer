@@ -69,10 +69,10 @@ function parseMarkdown(content) {
     return data;
 }
 
-// Function to find README.md file
+// Function to find awesome-list-content.md file
 function findReadmeFile(startDir) {
     const files = fs.readdirSync(startDir);
-    const readmeFile = files.find(file => file.toLowerCase() === 'readme.md');
+    const readmeFile = files.find(file => file.toLowerCase() === 'awesome-list-content.md');
     
     if (readmeFile) {
         return path.join(startDir, readmeFile);
@@ -100,7 +100,7 @@ try {
     const readmePath = findReadmeFile(process.cwd());
     
     if (!readmePath) {
-        console.error('No README.md file found.');
+        console.error('No awesome-list-content.md file found.');
         process.exit(1);
     }
 

@@ -1,0 +1,48 @@
+name: Generate Sitemap
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'sitemap.xml'  # Prevent recursive triggers
+  schedule:
+    - cron: '0 0 * * 0'  # Run weekly on Sunday at midnight
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  generate-sitemap:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Generate sitemap
+        run: |
+          set -e  # Exit immediately if a command exits with non-zero status
+          npx @jsdevtools/sitemap-generator-cli create \
+            --base-url="https://bytexgrid.github.io/awesome-list-explorer/" \
+            --include="**/*.{html,md,png,svg}" \
+            --exclude="**/node_modules/**,**/.github/**,**/.*" \
+            --filepath="./sitemap.xml" \
+            --pretty
+
+      - name: Configure Git
+        if: success()  # Only run if sitemap generation succeeded
+        run: |
+          set -e
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+      - name: Commit and push if changed
+        if: success()  # Only run if previous steps succeeded
+        run: |
+          set -e
+          git add sitemap.xml
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update sitemap.xml" && git push)

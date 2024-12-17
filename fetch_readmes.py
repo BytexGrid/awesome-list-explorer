@@ -31,7 +31,7 @@ class ReadmeFetcher:
         """Fetch README from a GitHub repository"""
         base_url = github_url.replace('#readme', '').replace('github.com', 'raw.githubusercontent.com')
         branches = ['main', 'master']
-        filenames = ['README.md', 'readme.md', 'Readme.md']
+        filenames = ['awesome-list-content.md', 'README.md', 'readme.md', 'Readme.md']
         
         for branch in branches:
             for filename in filenames:
