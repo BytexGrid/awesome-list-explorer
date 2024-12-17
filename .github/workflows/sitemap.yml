@@ -28,9 +28,13 @@ jobs:
           base-url-path: https://bytexgrid.github.io/awesome-list-explorer/
           include-html: true
           include-pdf: false
-          include-images: true
-          additional-extensions: md
-          exclude-paths: .github,.git
+          include-images: false
+          additional-extensions: ""
+          exclude-paths: .github,.git,data,media
+          additional-files: README.md
+          url-patterns: |
+            ^.*\.html$
+            ^README\.md$
 
       - name: Configure Git
         if: steps.sitemap.outputs.sitemap-path != ''
