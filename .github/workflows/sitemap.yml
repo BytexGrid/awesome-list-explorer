@@ -29,7 +29,8 @@ jobs:
       - name: Generate sitemap
         run: |
           set -e  # Exit immediately if a command exits with non-zero status
-          npx @jsdevtools/sitemap-generator-cli create \
+          npm install -g sitemap-generator-cli
+          sitemap-generator-cli create \
             --base-url="https://bytexgrid.github.io/awesome-list-explorer/" \
             --include="**/*.{html,md,png,svg}" \
             --exclude="**/node_modules/**,**/.github/**,**/.*" \
