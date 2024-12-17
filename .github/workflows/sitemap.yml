@@ -26,26 +26,72 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Create sitemap generation script
+        run: |
+          cat > generate-sitemap.js << 'EOF'
+          const fs = require('fs');
+          const path = require('path');
+          
+          function getFiles(dir, ext) {
+            let results = [];
+            const list = fs.readdirSync(dir);
+            list.forEach(file => {
+              file = path.join(dir, file);
+              const stat = fs.statSync(file);
+              if (stat && stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
+                results = results.concat(getFiles(file, ext));
+              } else if (ext.some(e => file.endsWith(e))) {
+                results.push(file);
+              }
+            });
+            return results;
+          }
+          
+          const baseUrl = 'https://bytexgrid.github.io/awesome-list-explorer/';
+          const files = getFiles('.', ['.html', '.md', '.png', '.svg']);
+          
+          const xmlItems = files.map(file => {
+            const relativePath = file.replace(/^\.\//, '').replace(/\\/g, '/');
+            const priority = file.endsWith('index.html') ? '1.0' :
+                           file.endsWith('README.md') ? '0.9' :
+                           file.endsWith('.html') ? '0.9' :
+                           file.endsWith('.md') ? '0.7' :
+                           '0.5';
+            const freq = file.endsWith('index.html') ? 'daily' :
+                        file.endsWith('.html') ? 'daily' :
+                        file.endsWith('.md') ? 'weekly' :
+                        'monthly';
+            return `
+  <url>
+    <loc>${baseUrl}${relativePath}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>${freq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+          }).join('');
+          
+          const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${xmlItems}
+</urlset>`;
+          
+          fs.writeFileSync('sitemap.xml', sitemap);
+          EOF
+
       - name: Generate sitemap
         run: |
-          set -e  # Exit immediately if a command exits with non-zero status
-          npm install -g sitemap-generator-cli
-          sitemap-generator-cli create \
-            --base-url="https://bytexgrid.github.io/awesome-list-explorer/" \
-            --include="**/*.{html,md,png,svg}" \
-            --exclude="**/node_modules/**,**/.github/**,**/.*" \
-            --filepath="./sitemap.xml" \
-            --pretty
+          set -e
+          node generate-sitemap.js
 
       - name: Configure Git
-        if: success()  # Only run if sitemap generation succeeded
+        if: success()
         run: |
           set -e
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
       - name: Commit and push if changed
-        if: success()  # Only run if previous steps succeeded
+        if: success()
         run: |
           set -e
           git add sitemap.xml
