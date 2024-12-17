@@ -10,47 +10,36 @@ on:
   workflow_dispatch:  # Allow manual triggers
 
 permissions:
-  contents: write  # This is needed to push changes
+  contents: write
 
 jobs:
-  generate-sitemap:
+  sitemap:
     runs-on: ubuntu-latest
-    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Generate Sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
         with:
-          node-version: '18'
-
-      - name: Install dependencies
-        run: |
-          npm init -y
-          npm install @jsdevtools/sitemap-generator-cli --save-dev
-
-      - name: Generate sitemap
-        run: |
-          set -e
-          npx sitemap-generator-cli create \
-            --base-url="https://bytexgrid.github.io/awesome-list-explorer/" \
-            --include="**/*.{html,md,png,svg}" \
-            --exclude="**/node_modules/**,**/.github/**,**/.*,**/package.json,**/package-lock.json" \
-            --filepath="./sitemap.xml" \
-            --pretty
+          base-url-path: https://bytexgrid.github.io/awesome-list-explorer/
+          include-html: true
+          include-pdf: false
+          include-images: true
+          additional-extensions: md
+          exclude-paths: .github,.git
 
       - name: Configure Git
-        if: success()
+        if: steps.sitemap.outputs.sitemap-path != ''
         run: |
-          set -e
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
       - name: Commit and push if changed
-        if: success()
+        if: steps.sitemap.outputs.sitemap-path != ''
         run: |
-          set -e
           git add sitemap.xml
           git diff --quiet && git diff --staged --quiet || (git commit -m "Update sitemap.xml [$(date +'%Y-%m-%d')]" && git push)
